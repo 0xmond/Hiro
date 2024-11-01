@@ -16,8 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Hiro.Presentation\Hiro.Presentation.csproj" />
     <ProjectReference Include="..\LoggerService\LoggerService.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\Service.Contracts\Service.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
