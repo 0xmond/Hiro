@@ -1,0 +1,24 @@
+# User-specific files
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Build Output
+Hiro/bin/
+Hiro/obj/
+Hiro/TestResults/
+
+# Environment-specific files
+Hiro/appsettings.json
+Hiro/*.env
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Package files (if using older versions of .NET Framework)
+Hiro/packages/

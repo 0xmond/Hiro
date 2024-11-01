@@ -1,0 +1,12 @@
+D:\Main F\Courses\Git Course\Hiro\Contracts\bin\Debug\net8.0\Contracts.deps.json
+D:\Main F\Courses\Git Course\Hiro\Contracts\bin\Debug\net8.0\Contracts.dll
+D:\Main F\Courses\Git Course\Hiro\Contracts\bin\Debug\net8.0\Contracts.pdb
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\Contracts.sourcelink.json
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\Contracts.dll
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\Contracts.pdb
+D:\Main F\Courses\Git Course\Hiro\Contracts\obj\Debug\net8.0\ref\Contracts.dll

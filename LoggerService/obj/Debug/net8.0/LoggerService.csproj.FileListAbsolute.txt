@@ -1,0 +1,16 @@
+D:\Main F\Courses\Git Course\Hiro\LoggerService\bin\Debug\net8.0\LoggerService.deps.json
+D:\Main F\Courses\Git Course\Hiro\LoggerService\bin\Debug\net8.0\LoggerService.dll
+D:\Main F\Courses\Git Course\Hiro\LoggerService\bin\Debug\net8.0\LoggerService.pdb
+D:\Main F\Courses\Git Course\Hiro\LoggerService\bin\Debug\net8.0\Contracts.dll
+D:\Main F\Courses\Git Course\Hiro\LoggerService\bin\Debug\net8.0\Contracts.pdb
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.csproj.AssemblyReference.cache
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.AssemblyInfoInputs.cache
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.AssemblyInfo.cs
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.csproj.CoreCompileInputs.cache
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.sourcelink.json
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerSe.E7AEA5A8.Up2Date
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.dll
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\refint\LoggerService.dll
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.pdb
+D:\Main F\Courses\Git Course\Hiro\LoggerService\obj\Debug\net8.0\ref\LoggerService.dll
