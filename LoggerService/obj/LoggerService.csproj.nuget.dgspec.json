@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Main F\\Courses\\Git Course\\Hiro\\LoggerService\\LoggerService.csproj": {}
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\LoggerService.csproj": {}
   },
   "projects": {
-    "D:\\Main F\\Courses\\Git Course\\Hiro\\Contracts\\Contracts.csproj": {
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\Courses\\Git Course\\Hiro\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\Contracts\\Contracts.csproj",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\Contracts\\obj\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "D:\\Main F\\Courses\\Git Course\\Hiro\\LoggerService\\LoggerService.csproj": {
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\LoggerService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\Courses\\Git Course\\Hiro\\LoggerService\\LoggerService.csproj",
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\LoggerService.csproj",
         "projectName": "LoggerService",
-        "projectPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\LoggerService\\LoggerService.csproj",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\LoggerService.csproj",
         "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\LoggerService\\obj\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,8 +90,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Main F\\Courses\\Git Course\\Hiro\\Contracts\\Contracts.csproj": {
-                "projectPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\Contracts\\Contracts.csproj"
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Contracts\\Contracts.csproj"
               }
             }
           }

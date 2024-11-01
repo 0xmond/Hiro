@@ -2731,11 +2731,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\Courses\\Git Course\\Hiro\\Hiro\\Hiro.csproj",
+      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Hiro\\Hiro.csproj",
       "projectName": "Hiro",
-      "projectPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\Hiro\\Hiro.csproj",
+      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Hiro\\Hiro.csproj",
       "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\Hiro\\obj\\",
+      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Hiro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2753,11 +2753,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Main F\\Courses\\Git Course\\Hiro\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\Entities\\Entities.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Entities\\Entities.csproj"
             },
-            "D:\\Main F\\Courses\\Git Course\\Hiro\\LoggerService\\LoggerService.csproj": {
-              "projectPath": "D:\\Main F\\Courses\\Git Course\\Hiro\\LoggerService\\LoggerService.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\LoggerService.csproj"
             }
           }
         }
