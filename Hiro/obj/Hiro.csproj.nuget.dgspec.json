@@ -29,6 +29,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Entities\\Entities.csproj"
+              },
               "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Shared\\Shared.csproj": {
                 "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Shared\\Shared.csproj"
               }
@@ -269,6 +272,20 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.9.0, )"
             }
           },
           "imports": [
@@ -413,6 +430,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

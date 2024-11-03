@@ -30,3 +30,7 @@ D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\LoggerService\obj\Debug\
 D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\LoggerService\obj\Debug\net8.0\refint\LoggerService.dll
 D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\LoggerService\obj\Debug\net8.0\LoggerService.pdb
 D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\LoggerService\obj\Debug\net8.0\ref\LoggerService.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\LoggerService\bin\Debug\net8.0\Entities.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\LoggerService\bin\Debug\net8.0\Shared.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\LoggerService\bin\Debug\net8.0\Entities.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\LoggerService\bin\Debug\net8.0\Shared.pdb
