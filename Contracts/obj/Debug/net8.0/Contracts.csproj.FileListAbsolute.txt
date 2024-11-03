@@ -22,3 +22,9 @@ D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\obj\Debug\net8
 D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\obj\Debug\net8.0\refint\Contracts.dll
 D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\obj\Debug\net8.0\Contracts.pdb
 D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\obj\Debug\net8.0\ref\Contracts.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\obj\Debug\net8.0\Contracts.csproj.AssemblyReference.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\bin\Debug\net8.0\Entities.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\bin\Debug\net8.0\Shared.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\bin\Debug\net8.0\Entities.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\bin\Debug\net8.0\Shared.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\Hiro\Contracts\obj\Debug\net8.0\Contracts.csproj.Up2Date
