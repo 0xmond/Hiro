@@ -955,11 +955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\LoggerService.csproj",
+      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\LoggerService\\LoggerService.csproj",
       "projectName": "LoggerService",
-      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\LoggerService.csproj",
+      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\LoggerService\\LoggerService.csproj",
       "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\LoggerService\\obj\\",
+      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\LoggerService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -977,8 +977,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Contracts\\Contracts.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Contracts\\Contracts.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\Contracts\\Contracts.csproj"
             }
           }
         }

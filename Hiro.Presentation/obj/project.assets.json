@@ -872,11 +872,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
+      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
       "projectName": "Hiro.Presentation",
-      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
+      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
       "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Hiro.Presentation\\obj\\",
+      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\Hiro.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -894,8 +894,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Hiro\\Service.Contracts\\Service.Contracts.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V2\\Hiro\\Service.Contracts\\Service.Contracts.csproj"
             }
           }
         }

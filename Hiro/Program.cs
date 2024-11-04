@@ -11,6 +11,7 @@ LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nl
 
 // Add services to the container.
 builder.Services.ConfigureRepositoryManager();
+builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
