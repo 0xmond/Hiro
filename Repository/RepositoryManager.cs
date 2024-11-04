@@ -39,6 +39,6 @@ namespace Repository
         public IJobPostRepository JobPost => _jobPostRepository.Value;
         public IJobSeekerRepository JobSeeker => _jobSeekerRepository.Value;
         public ISkillRepository Skill => _skillRepository.Value;
-        public void Save() =>  _repositoryContext.SaveChanges();
+        public async Task SaveAsync() =>  await _repositoryContext.SaveChangesAsync();
     }
 }
