@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj": {}
+    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj": {
+    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Mahmoud Maged\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mahmoud Maged\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

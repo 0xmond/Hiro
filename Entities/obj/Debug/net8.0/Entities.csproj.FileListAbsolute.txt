@@ -50,3 +50,16 @@ D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Entities\obj\Debug\
 D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Entities\obj\Debug\net8.0\refint\Entities.dll
 D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Entities\obj\Debug\net8.0\Entities.pdb
 D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Entities\obj\Debug\net8.0\ref\Entities.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\bin\Debug\net8.0\Entities.deps.json
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\bin\Debug\net8.0\Entities.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\bin\Debug\net8.0\Entities.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\Entities.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\refint\Entities.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\Entities.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Entities\obj\Debug\net8.0\ref\Entities.dll

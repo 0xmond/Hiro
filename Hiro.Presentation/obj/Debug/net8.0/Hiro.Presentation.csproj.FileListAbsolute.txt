@@ -58,3 +58,23 @@ D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Hiro.Presentation\o
 D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Hiro.Presentation\obj\Debug\net8.0\refint\Hiro.Presentation.dll
 D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.pdb
 D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Hiro.Presentation\obj\Debug\net8.0\ref\Hiro.Presentation.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Hiro.Presentation.deps.json
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Hiro.Presentation.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Hiro.Presentation.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Entities.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Service.Contracts.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Shared.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Service.Contracts.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Entities.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\bin\Debug\net8.0\Shared.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.csproj.AssemblyReference.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.AssemblyInfoInputs.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.AssemblyInfo.cs
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.sourcelink.json
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Pre.35F957CE.Up2Date
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\refint\Hiro.Presentation.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\Hiro.Presentation.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Hiro.Presentation\obj\Debug\net8.0\ref\Hiro.Presentation.dll
