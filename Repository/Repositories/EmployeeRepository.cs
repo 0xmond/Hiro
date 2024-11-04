@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Contracts;
+using Contracts.Repository.Contracts;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository.Repositories
 {
@@ -13,5 +14,19 @@ namespace Repository.Repositories
         public EmployeeRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {
         }
+
+        public async Task<IEnumerable<Employee>> GetAllEmployeesAsync(bool trackChanges)
+           => await FindAll(trackChanges)
+                .OrderBy(c => c.User.FirstName)
+                .ToListAsync();
+
+
+        public async Task<Employee> GetEmployeeAsync(Guid employeeId, bool trackChanges) =>
+            await FindByCondition(c => c.UserId.Equals(employeeId), trackChanges).SingleOrDefaultAsync();
+
+
+        public void CreateEmployee(Employee employee) => Create(employee);
+
+        public void DeleteEmployee(Employee employee) => Delete(employee);
     }
 }

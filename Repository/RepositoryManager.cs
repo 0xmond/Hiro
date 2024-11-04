@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Contracts.Repository.Contracts;
 using Entities.Models;
 using Repository.Repositories;
 using System;

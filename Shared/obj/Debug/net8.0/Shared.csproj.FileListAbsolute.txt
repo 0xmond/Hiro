@@ -22,3 +22,15 @@ D:\Main F\CS\4TH\Graduation Project\Implementation\V2\Hiro\Shared\obj\Debug\net8
 D:\Main F\CS\4TH\Graduation Project\Implementation\V2\Hiro\Shared\obj\Debug\net8.0\refint\Shared.dll
 D:\Main F\CS\4TH\Graduation Project\Implementation\V2\Hiro\Shared\obj\Debug\net8.0\Shared.pdb
 D:\Main F\CS\4TH\Graduation Project\Implementation\V2\Hiro\Shared\obj\Debug\net8.0\ref\Shared.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\bin\Debug\net8.0\Shared.deps.json
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\bin\Debug\net8.0\Shared.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\bin\Debug\net8.0\Shared.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\Shared.AssemblyInfoInputs.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\Shared.AssemblyInfo.cs
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\Shared.csproj.CoreCompileInputs.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\Shared.sourcelink.json
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\Shared.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\refint\Shared.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\Shared.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Shared\obj\Debug\net8.0\ref\Shared.dll

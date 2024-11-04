@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Hiro.Presentation
-build_property.ProjectDir = D:\Main F\CS\4TH\Graduation Project\Implementation\V2\Hiro\Hiro.Presentation\
+build_property.ProjectDir = D:\Main F\CS\4TH\Graduation Project\Implementation\Test\Hiro\Hiro.Presentation\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
