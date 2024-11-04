@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Repository\\Repository.csproj": {}
+    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Contracts\\Contracts.csproj",
-        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Contracts\\obj\\",
+        "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Contracts\\Contracts.csproj",
+        "packagesPath": "C:\\Users\\Mahmoud Maged\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mahmoud Maged\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj"
+              "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj"
               },
-              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Shared\\Shared.csproj": {
-                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Shared\\Shared.csproj"
+              "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj"
               }
             }
           }
@@ -68,21 +72,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj": {
+    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Mahmoud Maged\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mahmoud Maged\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -135,21 +143,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Repository\\Repository.csproj": {
+    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Mahmoud Maged\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mahmoud Maged\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -164,11 +176,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Contracts\\Contracts.csproj": {
-                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Contracts\\Contracts.csproj"
+              "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Contracts\\Contracts.csproj"
               },
-              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Entities\\Entities.csproj"
+              "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Entities\\Entities.csproj"
               }
             }
           }
@@ -209,21 +221,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Shared\\Shared.csproj": {
+    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\Test\\Hiro\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Mahmoud Maged\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mahmoud Maged\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -270,7 +286,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
