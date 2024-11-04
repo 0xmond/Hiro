@@ -1,13 +1,12 @@
-﻿using Service.Contracts;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service 
+namespace Service.Contracts
 {
-    public class EmployeeService : IEmployeeService
+    public interface IAdministratorService
     {
     }
 }
