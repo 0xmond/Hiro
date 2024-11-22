@@ -18,6 +18,8 @@ namespace Entities.Models
         public string Description { get; set; }
         public double Salary { get; set; }
         public string Location { get; set; }
+        public string JobType { get; set; } // Full time - Part Time - Hybrid
+        public string Experience { get; set; } // Fresher - Intermediate - Expert - No Experience - Internship
         public Company Company { get; set; }
         public ICollection<JobApplication>? JobApplications { get; set; }
         //public JobSeeker JobStatus { get; set; }

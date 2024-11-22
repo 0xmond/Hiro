@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj": {}
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V4\\Hiro\\Shared\\Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj": {
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V4\\Hiro\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj",
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V4\\Hiro\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\Mahmoud Maged\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mahmoud Maged\\Desktop\\Graduation\\Hiro\\Shared\\obj\\",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V4\\Hiro\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V4\\Hiro\\Shared\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Mahmoud Maged\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -18,8 +18,7 @@ namespace Entities.Models
         public Guid JobSeekerId { get; set; }
 
         public DateTime SubmittedAt { get; set; }
-        public JobPost JobPost { get; set; }
-        public JobSeeker? JobSeeker { get; set; }
+        public JobSeeker JobSeeker { get; set; }
         //public ApplicationStatus ApplicationStatus { get; set; }
     }
 }

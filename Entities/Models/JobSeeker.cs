@@ -11,9 +11,20 @@ namespace Entities.Models
     {
         public Guid Id { get; set; }
         [ForeignKey(nameof(User))]
-        public string UserId { get; set; }
-        public User User { get; set; }
+        public Guid UserId { get; set; }
+        public string FirstName { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Address { get; set; }
+        public string ProfilePictureUrl { get; set; }
+        public string Resume { get; set; }
+        public string? GithubUrl { get; set; }
+        public string? Website { get; set; }
         public ICollection<Skill> Skills { get; set; }
-        public ICollection<JobApplication>? JobApplications { get; set; }
+        public string Education { get; set; }
+        public string WorkExperience { get; set; }
+        public ICollection<JobApplication> JobApplications { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
