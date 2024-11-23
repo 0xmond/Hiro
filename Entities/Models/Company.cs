@@ -11,12 +11,18 @@ namespace Entities.Models
     {
         public Guid Id { get; set; }
         [ForeignKey(nameof(User))]
-        public string UserId { get; set; }
-        [Column("CompanyId")]
+        public Guid UserId { get; set; }
         public string CompanyName { get; set; }
-        public ICollection<Employee> Employees { get; set; }
-        public User User { get; set; }
+        public string CompanyWebsite { get; set; }
+        public string CompanyLogoUrl { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Address { get; set; }
+        public string AboutCompany { get; set; }
         public ICollection<JobPost> JobPosts { get; set; }
+        public int? EmployeesCount { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public User User { get; set; }
 
     }
 }
