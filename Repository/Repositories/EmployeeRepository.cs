@@ -17,7 +17,6 @@ namespace Repository.Repositories
 
         public async Task<IEnumerable<Employee>> GetAllEmployeesAsync(bool trackChanges)
            => await FindAll(trackChanges)
-                .OrderBy(c => c.User.FirstName)
                 .ToListAsync();
 
 

@@ -17,7 +17,6 @@ namespace Repository.Repositories
 
         public async Task<IEnumerable<JobSeeker>> GetAllJobSeekersAsync(bool trackChanges)
            => await FindAll(trackChanges)
-                .OrderBy(c => c.User.FirstName)
                 .ToListAsync();
 
         public async Task<JobSeeker> GetJobSeekerAsync(Guid jobSeekerId, bool trackChanges) =>
