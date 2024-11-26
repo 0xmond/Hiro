@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Models
+namespace Entities.Models.Profiles
 {
-    public class Company
+    public class CompanyProfile
     {
         public Guid Id { get; set; }
         [ForeignKey(nameof(User))]
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public string CompanyName { get; set; }
         public string CompanyWebsite { get; set; }
         public string CompanyLogoUrl { get; set; }

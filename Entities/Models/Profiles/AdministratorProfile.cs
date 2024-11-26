@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Models
+namespace Entities.Models.Profiles
 {
-    public class Administrator
+    public class AdministratorProfile
     {
         public Guid Id { get; set; }
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
+        public User User { get; set; }
     }
 }

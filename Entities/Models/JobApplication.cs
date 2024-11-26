@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities.Models.Profiles;
 
 namespace Entities.Models
 {
@@ -18,7 +19,16 @@ namespace Entities.Models
         public Guid JobSeekerId { get; set; }
 
         public DateTime SubmittedAt { get; set; }
-        public JobSeeker JobSeeker { get; set; }
-        //public ApplicationStatus ApplicationStatus { get; set; }
+        public enum ApplicationStatus
+        {
+            InProgress,
+            UnderConsideration,
+            Interviewed,
+            Rejected,
+            Offer,
+            Hired
+        }
+        public JobSeekerProfile JobSeeker { get; set; }
+        public JobPost JobPost { get; set; }
     }
 }

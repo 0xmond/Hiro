@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Entities.Models.Profiles;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -84,12 +85,12 @@ namespace Repository
                 .ToTable("Users");
         }
 
-        public DbSet<Employee>? Employees { get; set; } 
-        public DbSet<JobSeeker>? JobSeekers { get; set; } 
-        public DbSet<Administrator>? Administrators { get; set; }
+        public DbSet<EmployeeProfile>? Employees { get; set; } 
+        public DbSet<JobSeekerProfile>? JobSeekers { get; set; } 
+        public DbSet<AdministratorProfile>? Administrators { get; set; }
         public DbSet<Skill>? Skills { get; set; }
         public DbSet<JobPost>? JobPosts { get; set; }
         public DbSet<JobApplication>? JobApplications { get; set; }
-        public DbSet<Company>? Companies { get; set; }
+        public DbSet<CompanyProfile>? Companies { get; set; }
     }
 }

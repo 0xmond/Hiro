@@ -1,4 +1,4 @@
-﻿using Entities.Models;
+﻿using Entities.Models.Profiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,10 @@ namespace Contracts.Repository.Contracts
 {
     public interface ICompanyRepository
     {
-        Task<IEnumerable<Company>> GetAllCompaniesAsync(bool trackChanges);
-        Task<Company> GetCompanyAsync(Guid companyId, bool trackChanges);
-        void CreateCompany(Company company);
-        void DeleteCompany(Company company);
+        Task<IEnumerable<CompanyProfile>> GetAllCompaniesAsync(bool trackChanges);
+        Task<CompanyProfile> GetCompanyAsync(Guid companyId, bool trackChanges);
+        void CreateCompany(CompanyProfile company);
+        void DeleteCompany(CompanyProfile company);
     }
 }
 
