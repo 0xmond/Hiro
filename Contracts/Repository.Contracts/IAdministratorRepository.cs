@@ -1,4 +1,4 @@
-﻿using Entities.Models;
+﻿using Entities.Models.Profiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,10 @@ namespace Contracts.Repository.Contracts
 {
     public interface IAdministratorRepository
     {
-        Task<IEnumerable<Administrator>> GetAllAdminsAsync(bool trackChanges);
-        Task<Administrator> GetAdminAsync(Guid adminId, bool trackChanges);
-        void CreateAdmin(Administrator administrator);
-        void DeleteAdmin(Administrator administrator);
+        Task<IEnumerable<AdministratorProfile>> GetAllAdminsAsync(bool trackChanges);
+        Task<AdministratorProfile> GetAdminAsync(Guid adminId, bool trackChanges);
+        void CreateAdmin(AdministratorProfile administrator);
+        void DeleteAdmin(AdministratorProfile administrator);
     }
 }
 

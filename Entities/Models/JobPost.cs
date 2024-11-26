@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities.Models.Profiles;
 
 namespace Entities.Models
 {
@@ -14,14 +15,27 @@ namespace Entities.Models
         [ForeignKey(nameof(Company))]
         public Guid CompanyId { get; set; }
 
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public double Salary { get; set; }
+        public string JobTitle { get; set; }
+        public string JobDescription { get; set; }
         public string Location { get; set; }
-        public string JobType { get; set; } // Full time - Part Time - Hybrid
-        public string Experience { get; set; } // Fresher - Intermediate - Expert - No Experience - Internship
-        public Company Company { get; set; }
+        public string? SalaryRange { get; set; }
+        public enum JobType
+        {
+            FullTime,
+            PartTime,
+            Hybrid
+        }
+        public enum Experience
+        {
+            Fresher,
+            Intermediate,
+            Expert,
+            NoExperience,
+            Internship
+        } 
+        public DateTime PostedDate { get; set; }
+        public DateTime ApplicationDeadLine { get; set; }
+        public CompanyProfile Company { get; set; }
         public ICollection<JobApplication>? JobApplications { get; set; }
-        //public JobSeeker JobStatus { get; set; }
     }
 }
