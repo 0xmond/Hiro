@@ -4,6 +4,7 @@ using Entities.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Repository;
 using Service.AuthenticationServices;
 using Service.Contracts;
 using Service.Contracts.AuthenticationServices.Contracts;
@@ -21,18 +22,22 @@ namespace Service
         private readonly Lazy<CompanyAuthService> _companyService;
         private readonly Lazy<AdministratorAuthService> _administratorService;
         private readonly Lazy<EmployeeAuthService> _employeeService;
+        private readonly Lazy<JobSeekerAuthService> _jobSeekerAuthService;
 
-        public ServiceManager(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper, IConfiguration configuration, UserManager<User> userManager) 
+        public ServiceManager(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper, IConfiguration configuration, UserManager<User> userManager, RepositoryContext repositoryContext) 
         {
             _companyService = new Lazy<CompanyAuthService>(() => new CompanyAuthService(repositoryManager, loggerManager, mapper, userManager, configuration));
 
             _administratorService = new Lazy<AdministratorAuthService>(() => new AdministratorAuthService(loggerManager, mapper, configuration, userManager, repositoryManager));
 
-            _employeeService = new Lazy<EmployeeAuthService>(() => new EmployeeAuthService(loggerManager, mapper, configuration, userManager, repositoryManager));
+            _employeeService = new Lazy<EmployeeAuthService>(() => new EmployeeAuthService(loggerManager, mapper, configuration, userManager, repositoryManager, repositoryContext));
+
+            _jobSeekerAuthService = new Lazy<JobSeekerAuthService>(() => new JobSeekerAuthService(loggerManager, mapper, configuration, userManager, repositoryManager, repositoryContext));
         }
 
         public ICompanyAuthService CompanyService => _companyService.Value;
         public IAdministratorAuthService AdministratorService => _administratorService.Value;
         public IEmployeeAuthService EmployeeAuthService => _employeeService.Value;
+        public IJobSeekerAuthService JobSeekerAuthService => _jobSeekerAuthService.Value;
     }
 }

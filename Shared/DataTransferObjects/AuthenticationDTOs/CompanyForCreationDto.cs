@@ -17,6 +17,5 @@ namespace Shared.DataTransferObjects.AuthenticationDTOs
         public string? Password { get; init; }
         public string? Email { get; init; }
         public string? PhoneNumber { get; init; }
-        public DateTime CreatedAt { get; init; }
     }
 }
