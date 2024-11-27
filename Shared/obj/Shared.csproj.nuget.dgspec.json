@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj": {}
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj": {}
   },
   "projects": {
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj": {
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj",
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\obj\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",

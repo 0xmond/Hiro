@@ -35,7 +35,7 @@ namespace Entities.Models
         } 
         public DateTime PostedDate { get; set; }
         public DateTime ApplicationDeadLine { get; set; }
-        public CompanyProfile Company { get; set; }
+        public CompanyProfile? Company { get; set; }
         public ICollection<JobApplication>? JobApplications { get; set; }
     }
 }

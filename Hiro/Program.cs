@@ -1,5 +1,7 @@
 using Contracts;
+using Entities.Models;
 using Hiro.Extensions;
+using Hiro.Presentation.ActionFilters;
 using Microsoft.AspNetCore.HttpOverrides;
 using NLog;
 
@@ -11,12 +13,18 @@ LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nl
 
 // Add services to the container.
 builder.Services.ConfigureRepositoryManager();
+builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggerService();
 builder.Services.ConfigureSwagger();
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddScoped<ValidationFilterAttribute>();
+builder.Services.AddAuthentication();
+builder.Services.ConfigureIdentity();
+builder.Services.ConfigureJWT(builder.Configuration);
 
 
 var app = builder.Build();
@@ -36,6 +44,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 
 app.UseCors("CorsPolicy");
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -25,7 +25,7 @@ namespace Repository.Repositories.ProfilesRepositories
             await FindByCondition(c => c.UserId.Equals(companyId), trackChanges).SingleOrDefaultAsync();
 
 
-        public void CreateCompany(CompanyProfile company) => Create(company);
+        public async void CreateCompany(CompanyProfile company) => Create(company);
 
         public void DeleteCompany(CompanyProfile company) => Delete(company);
 
