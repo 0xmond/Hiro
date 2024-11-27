@@ -22,15 +22,9 @@ namespace Hiro.Presentation.Controllers.Authentication
 
 
         [HttpPost("employee")]
-        //[ServiceFilter(typeof(ValidationFilterAttribute))]
-        public async Task<IActionResult> RegisterEmployee(EmployeeForCreationDto employeeForCreation)
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        public async Task<IActionResult> RegisterEmployee([FromBody] EmployeeForCreationDto employeeForCreation)
         {
-            if (employeeForCreation is null)
-                return BadRequest("null");
-
-            if (!ModelState.IsValid)
-                return UnprocessableEntity(ModelState);
-
 
             var result = await _service.EmployeeAuthService.CreateEmployeeAsync(employeeForCreation);
 

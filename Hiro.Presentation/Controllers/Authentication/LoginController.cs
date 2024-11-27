@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hiro.Presentation.ActionFilters;
+using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
 using Shared.DataTransferObjects.AuthenticationDTOs;
 using System;
@@ -22,22 +23,17 @@ namespace Hiro.Presentation.Controllers.Authentication
 
 
         [HttpPost]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> Authenticate([FromBody] UserForLoginDto user)
         {
-            if (user is null)
-                return BadRequest("null");
-
-            if (!ModelState.IsValid)
-                return UnprocessableEntity(ModelState);
 
             if (!await _service.CompanyService.ValidateUser(user))
                 return Unauthorized();
 
 
-            return Ok(new
-            {
-                Token = await _service.CompanyService.CreateToken()
-            });
+            var tokenDto = await _service.CompanyService.CreateToken(populateExp:true);
+
+            return Ok(tokenDto);
         }
     }
 }

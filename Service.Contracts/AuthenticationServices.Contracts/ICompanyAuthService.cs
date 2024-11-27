@@ -12,6 +12,7 @@ namespace Service.Contracts.AuthenticationServices.Contracts
     {
         Task<IdentityResult> CreateCompanyAsync(CompanyForCreationDto company);
         Task<bool> ValidateUser(UserForLoginDto userForAuth);
-        Task<string> CreateToken();
+        Task<TokenDto> CreateToken(bool populateExp);
+        Task<TokenDto> RefreshToken(TokenDto tokenDto);
     }
 }
