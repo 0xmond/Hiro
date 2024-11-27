@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contracts.Repository.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,9 @@ namespace Contracts
 {
     public interface IRepositoryManager
     {
+        ICompanyRepository Company { get; }
+        IAdministratorRepository Administrator { get; }
+        IEmployeeRepository Employee { get; }
         Task SaveAsync();
     }
 }

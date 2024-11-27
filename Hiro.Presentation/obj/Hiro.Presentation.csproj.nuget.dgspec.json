@@ -1,17 +1,84 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj": {}
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj": {}
   },
   "projects": {
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Entities\\Entities.csproj": {
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Entities\\Entities.csproj",
-        "projectName": "Entities",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Contracts\\Contracts.csproj",
+        "projectName": "Contracts",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Entities\\obj\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Entities\\Entities.csproj"
+              },
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,14 +137,14 @@
         }
       }
     },
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj": {
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
         "projectName": "Hiro.Presentation",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
         "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Hiro.Presentation\\obj\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Hiro.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,75 +161,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
-                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Service.Contracts\\Service.Contracts.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Service.Contracts\\Service.Contracts.csproj",
-        "projectName": "Service.Contracts",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Service.Contracts\\Service.Contracts.csproj",
-        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Service.Contracts\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Entities\\Entities.csproj"
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\LoggerService\\LoggerService.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\LoggerService\\LoggerService.csproj"
               },
-              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj": {
-                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj"
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Service.Contracts\\Service.Contracts.csproj"
               }
             }
           }
@@ -181,6 +184,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -201,14 +210,161 @@
         }
       }
     },
-    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj": {
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\LoggerService\\LoggerService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj",
-        "projectName": "Shared",
-        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\Shared.csproj",
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\LoggerService\\LoggerService.csproj",
+        "projectName": "LoggerService",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\LoggerService\\LoggerService.csproj",
         "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V6\\Hiro\\Shared\\obj\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\LoggerService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Contracts\\Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.3.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Service.Contracts\\Service.Contracts.csproj",
+        "projectName": "Service.Contracts",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Service.Contracts\\Service.Contracts.csproj",
+        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Service.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Entities\\Entities.csproj"
+              },
+              "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
+        "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V7\\Hiro\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",

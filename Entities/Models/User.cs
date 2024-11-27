@@ -12,8 +12,9 @@ namespace Entities.Models
 {
     public class User : IdentityUser
     {
-        public AdministratorProfile Administrator { get; set; }
-        public EmployeeProfile Employee{ get; set; }
-        public JobSeekerProfile JobSeeker { get; set; }
+        public AdministratorProfile? Administrator { get; set; }
+        public EmployeeProfile? Employee{ get; set; }
+        public CompanyProfile? Company{ get; set; }
+        public JobSeekerProfile? JobSeeker { get; set; }
     }
 }

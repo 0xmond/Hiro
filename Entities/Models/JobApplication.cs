@@ -28,7 +28,7 @@ namespace Entities.Models
             Offer,
             Hired
         }
-        public JobSeekerProfile JobSeeker { get; set; }
-        public JobPost JobPost { get; set; }
+        public JobSeekerProfile? JobSeeker { get; set; }
+        public JobPost? JobPost { get; set; }
     }
 }

@@ -12,6 +12,7 @@ namespace Entities.Models.Profiles
         public Guid Id { get; set; }
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
-        public User User { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public User? User { get; set; }
     }
 }

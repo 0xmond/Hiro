@@ -24,8 +24,8 @@ namespace Entities.Models.Profiles
         public string WorkExperience { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public User User { get; set; }
-        public ICollection<Skill> Skills { get; set; }
-        public ICollection<JobApplication> JobApplications { get; set; }
+        public User? User { get; set; }
+        public ICollection<Skill>? Skills { get; set; }
+        public ICollection<JobApplication>? JobApplications { get; set; }
     }
 }

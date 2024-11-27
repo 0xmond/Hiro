@@ -23,7 +23,7 @@ namespace Repository.Repositories.ProfilesRepositories
         public async Task<AdministratorProfile> GetAdminAsync(Guid adminId, bool trackChanges) =>
             await FindByCondition(c => c.UserId.Equals(adminId), trackChanges).SingleOrDefaultAsync();
 
-        public void CreateAdmin(AdministratorProfile administrator) => Create(administrator);
+        public async void CreateAdmin(AdministratorProfile administrator) => Create(administrator);
 
         public void DeleteAdmin(AdministratorProfile administrator) => Delete(administrator);
 
