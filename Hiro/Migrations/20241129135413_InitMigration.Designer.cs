@@ -12,8 +12,8 @@ using Repository;
 namespace Hiro.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20241127125025_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20241129135413_InitMigration")]
+    partial class InitMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -348,12 +348,6 @@ namespace Hiro.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("RefreshToken")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("RefreshTokenExpiryTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -421,7 +415,7 @@ namespace Hiro.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a581901d-8b2a-4008-bada-d682be8ac633",
+                            Id = "11124da7-cbba-41a8-b02f-39b61ed58ada",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

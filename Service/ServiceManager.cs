@@ -23,6 +23,7 @@ namespace Service
         private readonly Lazy<AdministratorAuthService> _administratorService;
         private readonly Lazy<EmployeeAuthService> _employeeService;
         private readonly Lazy<JobSeekerAuthService> _jobSeekerAuthService;
+        private readonly Lazy<AuthenticationService> _authenticationService;
 
         public ServiceManager(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper, IConfiguration configuration, UserManager<User> userManager, RepositoryContext repositoryContext) 
         {
@@ -33,11 +34,15 @@ namespace Service
             _employeeService = new Lazy<EmployeeAuthService>(() => new EmployeeAuthService(loggerManager, mapper, configuration, userManager, repositoryManager, repositoryContext));
 
             _jobSeekerAuthService = new Lazy<JobSeekerAuthService>(() => new JobSeekerAuthService(loggerManager, mapper, configuration, userManager, repositoryManager, repositoryContext));
+
+            _authenticationService = new Lazy<AuthenticationService>(() => new AuthenticationService(repositoryManager, loggerManager, userManager, configuration));
         }
 
         public ICompanyAuthService CompanyService => _companyService.Value;
         public IAdministratorAuthService AdministratorService => _administratorService.Value;
         public IEmployeeAuthService EmployeeAuthService => _employeeService.Value;
         public IJobSeekerAuthService JobSeekerAuthService => _jobSeekerAuthService.Value;
+
+        public IAuthenticationService AuthenticationService => _authenticationService.Value;
     }
 }
