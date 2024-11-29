@@ -13,5 +13,6 @@ namespace Service.Contracts
         IAdministratorAuthService AdministratorService { get; }
         IEmployeeAuthService EmployeeAuthService { get; }
         IJobSeekerAuthService JobSeekerAuthService { get; }
+        IAuthenticationService AuthenticationService { get; }
     }
 }

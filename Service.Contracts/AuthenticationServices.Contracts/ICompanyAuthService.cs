@@ -11,8 +11,5 @@ namespace Service.Contracts.AuthenticationServices.Contracts
     public interface ICompanyAuthService
     {
         Task<IdentityResult> CreateCompanyAsync(CompanyForCreationDto company);
-        Task<bool> ValidateUser(UserForLoginDto userForAuth);
-        Task<TokenDto> CreateToken(bool populateExp);
-        Task<TokenDto> RefreshToken(TokenDto tokenDto);
     }
 }

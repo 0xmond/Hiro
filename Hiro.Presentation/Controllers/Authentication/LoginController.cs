@@ -27,13 +27,13 @@ namespace Hiro.Presentation.Controllers.Authentication
         public async Task<IActionResult> Authenticate([FromBody] UserForLoginDto user)
         {
 
-            if (!await _service.CompanyService.ValidateUser(user))
+            if (!await _service.AuthenticationService.ValidateUser(user))
                 return Unauthorized();
 
-
-            var tokenDto = await _service.CompanyService.CreateToken(populateExp:true);
-
-            return Ok(tokenDto);
+            return Ok(new
+            {
+                Token = await _service.AuthenticationService.CreateToken()
+            });
         }
     }
 }
