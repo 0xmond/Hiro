@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q0GcgIzq38U=",
+  "dgSpecHash": "yHl4G2KF4ZI=",
   "success": true,
-  "projectFilePath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\LoggerService\\LoggerService.csproj",
+  "projectFilePath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\LoggerService\\LoggerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MONDY\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.10\\microsoft.aspnetcore.cryptography.internal.8.0.10.nupkg.sha512",
     "C:\\Users\\MONDY\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.10\\microsoft.aspnetcore.cryptography.keyderivation.8.0.10.nupkg.sha512",

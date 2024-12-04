@@ -376,7 +376,7 @@ namespace Hiro.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "11124da7-cbba-41a8-b02f-39b61ed58ada", null, "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "13322201-b599-472a-a4c3-c98fc10b66cd", null, "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AdministratorProfile_UserId",

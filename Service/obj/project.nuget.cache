@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H1YA8EXPFRg=",
+  "dgSpecHash": "grdFyaT/29g=",
   "success": true,
-  "projectFilePath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Service\\Service.csproj",
+  "projectFilePath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MONDY\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\MONDY\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

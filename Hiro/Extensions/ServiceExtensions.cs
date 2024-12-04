@@ -18,6 +18,8 @@ using Microsoft.OpenApi.Models;
 using Repository;
 using Service.Contracts;
 using Service;
+//using Hiro.Presentation.Controllers.Authentication.Service.Contracts;
+//using Hiro.Presentation.Controllers.Authentication.Service;
 
 namespace Hiro.Extensions
 {
@@ -43,6 +45,8 @@ namespace Hiro.Extensions
             // Registering ILoggerManager and LoggerManager in the DI Container
             services.AddSingleton<ILoggerManager, LoggerManager>();
         }
+
+
 
         public static void ConfigureSwagger(this IServiceCollection services)
         {
@@ -85,29 +89,50 @@ namespace Hiro.Extensions
             .AddEntityFrameworkStores<RepositoryContext>()
             .AddDefaultTokenProviders();
         }
-
+        public static void ConfigureEmailService(this IServiceCollection services)
+        {
+            services.AddScoped<IEmailService, EmailService>();
+        }
         public static void ConfigureJWT(this IServiceCollection services, IConfiguration configuration)
         {
-            var jwtSettings = configuration.GetSection("JwtSettings");
-            var secretKey = Environment.GetEnvironmentVariable("SECRET");
-            services.AddAuthentication(opt =>
+            try
             {
-                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
+                var jwtSettings = configuration.GetSection("JwtSettings");
+                var secretKey = Environment.GetEnvironmentVariable("SECRET");
+
+                if (string.IsNullOrWhiteSpace(secretKey))
                 {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = jwtSettings["validIssuer"],
-                    ValidAudience = jwtSettings["validAudience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
-                };
-            });
+
+                    Console.WriteLine($"SECRET key value: {secretKey}");
+
+                }
+
+                services.AddAuthentication(opt =>
+                {
+                    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = jwtSettings["validIssuer"],
+                        ValidAudience = jwtSettings["validAudience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+                    };
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An exception occurred during JWT configuration: {ex.Message}");
+                Console.WriteLine($"Stack Trace: {ex.StackTrace}");
+                throw;
+            }
         }
+
     }
 }

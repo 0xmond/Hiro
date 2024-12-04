@@ -12,7 +12,7 @@ using Repository;
 namespace Hiro.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20241129135413_InitMigration")]
+    [Migration("20241204103455_InitMigration")]
     partial class InitMigration
     {
         /// <inheritdoc />
@@ -415,7 +415,7 @@ namespace Hiro.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "11124da7-cbba-41a8-b02f-39b61ed58ada",
+                            Id = "13322201-b599-472a-a4c3-c98fc10b66cd",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

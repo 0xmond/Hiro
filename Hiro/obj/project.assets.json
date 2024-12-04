@@ -5492,11 +5492,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Hiro\\Hiro.csproj",
+      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Hiro\\Hiro.csproj",
       "projectName": "Hiro",
-      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Hiro\\Hiro.csproj",
+      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Hiro\\Hiro.csproj",
       "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Hiro\\obj\\",
+      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Hiro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5513,20 +5513,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\LoggerService\\LoggerService.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\LoggerService\\LoggerService.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\LoggerService\\LoggerService.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Repository\\Repository.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Repository\\Repository.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Repository\\Repository.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Service.Contracts\\Service.Contracts.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Service.Contracts\\Service.Contracts.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Service\\Service.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Service\\Service.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Service\\Service.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Service\\Service.csproj"
             }
           }
         }

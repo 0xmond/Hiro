@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hR53W/0qQD8=",
+  "dgSpecHash": "9kbjZnXOAVA=",
   "success": true,
-  "projectFilePath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
+  "projectFilePath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V testing\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MONDY\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\MONDY\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

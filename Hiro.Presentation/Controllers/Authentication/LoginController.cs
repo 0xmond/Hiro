@@ -1,10 +1,14 @@
 ﻿using Hiro.Presentation.ActionFilters;
+//using Hiro.Presentation.Controllers.Authentication.Service.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Service.Contracts;
 using Shared.DataTransferObjects.AuthenticationDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,4 +40,6 @@ namespace Hiro.Presentation.Controllers.Authentication
             });
         }
     }
+
+
 }

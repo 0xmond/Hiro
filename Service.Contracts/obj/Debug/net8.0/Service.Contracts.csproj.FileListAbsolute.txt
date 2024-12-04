@@ -124,3 +124,39 @@ D:\Main F\CS\4TH\Graduation Project\Implementation\V9\Hiro\Service.Contracts\obj
 D:\Main F\CS\4TH\Graduation Project\Implementation\V9\Hiro\Service.Contracts\obj\Debug\net8.0\refint\Service.Contracts.dll
 D:\Main F\CS\4TH\Graduation Project\Implementation\V9\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.pdb
 D:\Main F\CS\4TH\Graduation Project\Implementation\V9\Hiro\Service.Contracts\obj\Debug\net8.0\ref\Service.Contracts.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\bin\Debug\net8.0\Service.Contracts.deps.json
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\bin\Debug\net8.0\Service.Contracts.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\bin\Debug\net8.0\Service.Contracts.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\bin\Debug\net8.0\Entities.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\bin\Debug\net8.0\Shared.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\bin\Debug\net8.0\Entities.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\bin\Debug\net8.0\Shared.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.csproj.AssemblyReference.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.AssemblyInfoInputs.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.AssemblyInfo.cs
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.sourcelink.json
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service..DEC3DE55.Up2Date
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\refint\Service.Contracts.dll
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.pdb
+C:\Users\Mahmoud Maged\Desktop\Graduation\Hiro\Service.Contracts\obj\Debug\net8.0\ref\Service.Contracts.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\bin\Debug\net8.0\Service.Contracts.deps.json
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\bin\Debug\net8.0\Service.Contracts.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\bin\Debug\net8.0\Service.Contracts.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\bin\Debug\net8.0\Entities.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\bin\Debug\net8.0\Shared.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\bin\Debug\net8.0\Entities.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\bin\Debug\net8.0\Shared.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.csproj.AssemblyReference.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.AssemblyInfoInputs.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.AssemblyInfo.cs
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.csproj.CoreCompileInputs.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.sourcelink.json
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service..DEC3DE55.Up2Date
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\refint\Service.Contracts.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\Service.Contracts.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\V testing\Hiro\Service.Contracts\obj\Debug\net8.0\ref\Service.Contracts.dll
