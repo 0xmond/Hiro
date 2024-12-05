@@ -14,5 +14,7 @@ namespace Service.Contracts
         IEmployeeAuthService EmployeeAuthService { get; }
         IJobSeekerAuthService JobSeekerAuthService { get; }
         IAuthenticationService AuthenticationService { get; }
+        IResetPasswordService ResetPasswordService { get; }
+        IUserService UserService { get; }
     }
 }

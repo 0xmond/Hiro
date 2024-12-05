@@ -9,13 +9,16 @@ namespace Shared.DataTransferObjects.AuthenticationDTOs
 {
     public record CompanyForCreationDto
     {
+        [Required]
         public string CompanyName { get; init; }
         public string Address { get; init; }
         [Required(ErrorMessage = "Username is required")]
         public string? UserName { get; init; }
         [Required(ErrorMessage = "Password is required")]
         public string? Password { get; init; }
+        [Required(ErrorMessage = "Email is required")]
         public string? Email { get; init; }
+        [Required(ErrorMessage = "Phone number is required")]
         public string? PhoneNumber { get; init; }
     }
 }

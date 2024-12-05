@@ -37,7 +37,7 @@ namespace Hiro.Presentation.Controllers.Authentication
                 return BadRequest(ModelState);
             }
 
-            return StatusCode(201);
+            return Created("", new { Message = "Job seeker created successfully" });
         }
     }
 }

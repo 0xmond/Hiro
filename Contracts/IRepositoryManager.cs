@@ -13,6 +13,7 @@ namespace Contracts
         IAdministratorRepository Administrator { get; }
         IEmployeeRepository Employee { get; }
         IJobSeekerRepository JobSeeker { get; }
+        IUserRepository User { get; }
         Task SaveAsync();
     }
 }

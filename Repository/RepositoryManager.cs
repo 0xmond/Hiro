@@ -21,6 +21,7 @@ namespace Repository
         private readonly Lazy<IJobPostRepository> _jobPostRepository;
         private readonly Lazy<IJobSeekerRepository> _jobSeekerRepository;
         private readonly Lazy<ISkillRepository> _skillRepository;
+        private readonly Lazy<IUserRepository> _userRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
@@ -32,6 +33,7 @@ namespace Repository
             _jobPostRepository = new Lazy<IJobPostRepository>(() => new JobPostRepository(repositoryContext));
             _jobSeekerRepository = new Lazy<IJobSeekerRepository>(() => new JobSeekerRepository(repositoryContext));
             _skillRepository = new Lazy<ISkillRepository>(() => new SkillRepository(repositoryContext));
+            _userRepository = new Lazy<IUserRepository>(() => new UserRepository(repositoryContext));
         }
 
         public ICompanyRepository Company => _companyRepository.Value;
@@ -41,6 +43,7 @@ namespace Repository
         public IJobPostRepository JobPost => _jobPostRepository.Value;
         public IJobSeekerRepository JobSeeker => _jobSeekerRepository.Value;
         public ISkillRepository Skill => _skillRepository.Value;
+        public IUserRepository User => _userRepository.Value;
         public async Task SaveAsync() =>  await _repositoryContext.SaveChangesAsync();
     }
 }
