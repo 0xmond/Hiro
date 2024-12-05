@@ -109,5 +109,10 @@ namespace Hiro.Extensions
                 };
             });
         }
+
+        public static void ConfigureEmailService(this IServiceCollection services)
+        {
+            services.AddScoped<IEmailService, EmailService>();
+        }
     }
 }

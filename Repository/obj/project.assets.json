@@ -874,11 +874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Repository\\Repository.csproj",
+      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Repository\\Repository.csproj",
+      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Repository\\obj\\",
+      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -895,11 +895,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Contracts\\Contracts.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Contracts\\Contracts.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Contracts\\Contracts.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Entities\\Entities.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Entities\\Entities.csproj"
             }
           }
         }

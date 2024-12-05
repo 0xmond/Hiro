@@ -1054,11 +1054,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Service.Contracts\\Service.Contracts.csproj",
+      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Service.Contracts\\Service.Contracts.csproj",
       "projectName": "Service.Contracts",
-      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Service.Contracts\\Service.Contracts.csproj",
+      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Service.Contracts\\Service.Contracts.csproj",
       "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Service.Contracts\\obj\\",
+      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Service.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1075,11 +1075,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Entities\\Entities.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Entities\\Entities.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Shared\\Shared.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V9\\Hiro\\Shared\\Shared.csproj"
+            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Shared\\Shared.csproj": {
+              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Shared\\Shared.csproj"
             }
           }
         }

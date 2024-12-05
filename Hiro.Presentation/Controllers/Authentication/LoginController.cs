@@ -28,7 +28,7 @@ namespace Hiro.Presentation.Controllers.Authentication
         {
 
             if (!await _service.AuthenticationService.ValidateUser(user))
-                return Unauthorized();
+                return Unauthorized(new { message = "Invalid credentials"});
 
             return Ok(new
             {

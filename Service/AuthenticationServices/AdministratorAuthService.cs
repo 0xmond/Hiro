@@ -39,7 +39,7 @@ namespace Service.AuthenticationServices
 
             if (result.Succeeded)
             {
-                await _userManager.AddToRolesAsync(user, admin.Roles);
+                await _userManager.AddToRolesAsync(user, ["Administrator"]);
                 var administrator = new AdministratorProfile
                 {
                     Id = Guid.NewGuid(),
