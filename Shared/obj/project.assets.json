@@ -1,7 +1,8 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {},
+    "net8.0/win-x86": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
@@ -13,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Shared\\Shared.csproj",
+      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V14\\Hiro\\Shared\\Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Shared\\Shared.csproj",
+      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V14\\Hiro\\Shared\\Shared.csproj",
       "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V13\\Hiro\\Shared\\obj\\",
+      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V14\\Hiro\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,6 +68,11 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x86": {
+        "#import": []
       }
     }
   }

@@ -1,0 +1,13 @@
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\bin\Release\net8.0\Entities.deps.json
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\bin\Release\net8.0\Entities.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\bin\Release\net8.0\Entities.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\Entities.csproj.AssemblyReference.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\Entities.AssemblyInfoInputs.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\Entities.AssemblyInfo.cs
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\Entities.csproj.CoreCompileInputs.cache
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\Entities.sourcelink.json
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\Entities.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\refint\Entities.dll
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\Entities.pdb
+D:\Main F\CS\4TH\Graduation Project\Implementation\V14\Hiro\Entities\obj\Release\net8.0\ref\Entities.dll

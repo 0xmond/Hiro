@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hiro.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34f497a626847c6a90b121d176bd6b50946f7b07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e019639a1ac0f4d7873a968b4f07d060de90491e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hiro.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hiro.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
