@@ -3,12 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hiro.Controllers
 {
-    [Route("api/home")]
+    [Route("/")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
     public class HomeController : ControllerBase
     {
-        [Authorize]
         [HttpGet]
         public IActionResult GetHome()
         {

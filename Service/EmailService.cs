@@ -43,12 +43,13 @@ namespace Service
 
         public async Task SendEmailAsync(string to, (string subject, string body) details)
         {
+
             var smtpClient = new SmtpClient(_configuration["EmailSettings:SmtpServer"])
             {
                 Port = int.Parse(_configuration["EmailSettings:Port"]),
                 Credentials = new NetworkCredential(
                     _configuration["EmailSettings:Username"],
-                    _configuration["EmailSettings:Password"]),
+                    Environment.GetEnvironmentVariable("SMTPpass")),
                 EnableSsl = true
             };
 

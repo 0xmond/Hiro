@@ -28,33 +28,7 @@ namespace Hiro.Presentation.Controllers.Authentication
             _userManager = userManager;
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> ForgetPassword([FromBody] string email)
-        //{
-        //    try
-        //    {
-        //        if (string.IsNullOrWhiteSpace(email))
-        //        {
-        //            return BadRequest(new { message = "Email address is required" });
-        //        }
-
-        //        var addr = new System.Net.Mail.MailAddress(email);
-        //        if (addr.Address == email)
-        //        {
-        //            await _serviceManager.ResetPasswordService.SendResetEmailAsync(email);
-        //            return Ok(new { Message = "If the email address exists, check your inbox and you will find a reset email" });
-        //        }
-
-        //        throw new Exception();
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        return StatusCode(400, new { message = "Invalid email format" });
-        //    }
-
-        //}
-
-
+        
         [HttpPost("request-password-reset")]
         public async Task<IActionResult> RequestPasswordReset([FromBody] PasswordResetRequestDto request)
         {
