@@ -21,11 +21,9 @@ namespace Entities.Models
         public DateTime SubmittedAt { get; set; }
         public enum ApplicationStatus
         {
-            InProgress,
-            UnderConsideration,
-            Interviewed,
+            Pending,
+            Accepted,
             Rejected,
-            Offer,
             Hired
         }
         public JobSeekerProfile? JobSeeker { get; set; }

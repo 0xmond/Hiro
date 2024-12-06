@@ -35,13 +35,17 @@ namespace Hiro.Presentation.Controllers.Authentication
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var user = await _userManager.FindByEmailAsync(request.Email);
-            if (user == null)
-                return NotFound("User not found");
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(request.Email);
+                await _serviceManager.ResetPasswordService.SendResetEmailAsync(request.Email, user.Id);
+            }
+            catch (Exception e)
+            {
+            }
 
-            await _serviceManager.ResetPasswordService.SendResetEmailAsync(request.Email, user.Id);
 
-            return Ok(new { Message = "Password reset email sent successfully" });
+            return Ok(new { message = "If the email address exists, you will get a reset link in your inbox" });
         }
 
 
