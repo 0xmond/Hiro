@@ -46,7 +46,7 @@ namespace Service.AuthenticationServices
             if (string.IsNullOrEmpty(resetToken))
                 return (null,null);
 
-            string resetLink = $"http://localhost:5270/reset-password?token={resetToken}&email={email}";
+            string resetLink = $"https://hiro.runasp.net/reset-password?token={resetToken}&email={email}";
 
             string subject = "Password Reset Request";
             string body = $"<p>Click the link to reset your password: <a href='{resetLink}'>Reset Password</a></p>";

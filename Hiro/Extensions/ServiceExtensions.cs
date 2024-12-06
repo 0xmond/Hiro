@@ -63,7 +63,7 @@ namespace Hiro.Extensions
         {
             services.AddDbContext<RepositoryContext>(opts =>
             {
-                opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"));
+                opts.UseSqlServer(Environment.GetEnvironmentVariable("PConnString"));
             });
         }
 
