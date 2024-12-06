@@ -63,7 +63,8 @@ namespace Hiro.Extensions
         {
             services.AddDbContext<RepositoryContext>(opts =>
             {
-                opts.UseSqlServer(Environment.GetEnvironmentVariable("PConnString"));
+                //opts.UseSqlServer(Environment.GetEnvironmentVariable("PConnString"));
+                opts.UseSqlServer(configuration.GetConnectionString("devConnection"));
             });
         }
 
@@ -114,5 +115,6 @@ namespace Hiro.Extensions
         {
             services.AddScoped<IEmailService, EmailService>();
         }
+
     }
 }

@@ -33,8 +33,9 @@ namespace Entities.Models
             NoExperience,
             Internship
         } 
-        public DateTime PostedDate { get; set; }
         public DateTime ApplicationDeadLine { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public CompanyProfile? Company { get; set; }
         public ICollection<JobApplication>? JobApplications { get; set; }
     }

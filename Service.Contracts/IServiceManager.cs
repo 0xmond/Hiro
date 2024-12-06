@@ -16,5 +16,6 @@ namespace Service.Contracts
         IAuthenticationService AuthenticationService { get; }
         IResetPasswordService ResetPasswordService { get; }
         IUserService UserService { get; }
+        IJobPostService JobPostService { get; }
     }
 }
