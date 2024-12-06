@@ -10,7 +10,7 @@ namespace Contracts.Repository.Contracts
     public interface IJobPostRepository
     {
         Task<IEnumerable<JobPost>> GetAllJobPostsAsync(bool trackChanges);
-        Task<JobPost> GetJobPostAsync(Guid jobPostId, bool trackChanges);
+        Task<JobPost> GetJobPostAsync(string jobPostId, bool trackChanges);
         void CreateJobPost(JobPost jobPost);
         void DeleteJobPost(JobPost jobPost);
     }

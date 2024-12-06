@@ -19,8 +19,8 @@ namespace Repository.Repositories
                => await FindAll(trackChanges)
                 .ToListAsync();
 
-        public async Task<JobPost> GetJobPostAsync(Guid companyId, bool trackChanges) =>
-            await FindByCondition(c => c.Id.Equals(companyId), trackChanges).SingleOrDefaultAsync();
+        public async Task<JobPost> GetJobPostAsync(string companyId, bool trackChanges) =>
+            await FindByCondition(c => c.Id.ToString().Equals(companyId), trackChanges).Include(p => p.Company).SingleOrDefaultAsync();
 
 
         public void CreateJobPost(JobPost jobPost) => Create(jobPost);

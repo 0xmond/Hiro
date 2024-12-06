@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Hiro.Migrations
 {
     /// <inheritdoc />
-    public partial class InitMigration : Migration
+    public partial class InitMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -286,8 +286,9 @@ namespace Hiro.Migrations
                     JobDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SalaryRange = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PostedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ApplicationDeadLine = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    ApplicationDeadLine = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2024, 12, 6, 22, 56, 30, 582, DateTimeKind.Local).AddTicks(7696)),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP")
                 },
                 constraints: table =>
                 {
@@ -376,7 +377,7 @@ namespace Hiro.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "11124da7-cbba-41a8-b02f-39b61ed58ada", null, "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "a67f3122-a0db-4626-9430-872241bac805", null, "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AdministratorProfile_UserId",

@@ -14,7 +14,7 @@ namespace Hiro.ContextFactory
                 .Build();
             var builder = new DbContextOptionsBuilder<RepositoryContext>()
                 // DbContextOptions:
-                .UseSqlServer(configuration.GetConnectionString("productionConnection"),
+                .UseSqlServer(configuration.GetConnectionString("devConnection"),
                     b => b.MigrationsAssembly("Hiro")); // Migration Files
             return new RepositoryContext(builder.Options);
         }

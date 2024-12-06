@@ -75,6 +75,11 @@ namespace Hiro.Migrations
                     b.Property<Guid>("CompanyId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2024, 12, 6, 22, 56, 30, 582, DateTimeKind.Local).AddTicks(7696));
+
                     b.Property<string>("JobDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -87,11 +92,13 @@ namespace Hiro.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("PostedDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("SalaryRange")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.HasKey("Id");
 
@@ -412,7 +419,7 @@ namespace Hiro.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "11124da7-cbba-41a8-b02f-39b61ed58ada",
+                            Id = "a67f3122-a0db-4626-9430-872241bac805",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

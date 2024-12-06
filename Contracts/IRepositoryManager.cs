@@ -14,6 +14,7 @@ namespace Contracts
         IEmployeeRepository Employee { get; }
         IJobSeekerRepository JobSeeker { get; }
         IUserRepository User { get; }
+        IJobPostRepository JobPost { get; }
         Task SaveAsync();
     }
 }

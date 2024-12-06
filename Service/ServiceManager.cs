@@ -26,6 +26,7 @@ namespace Service
         private readonly Lazy<AuthenticationService> _authenticationService;
         private readonly Lazy<ResetPasswordService> _resetPasswordService;
         private readonly Lazy<UserService> _userService;
+        private readonly Lazy<JobPostService> _jobPostService;
 
         public ServiceManager(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper, IConfiguration configuration, UserManager<User> userManager, RepositoryContext repositoryContext, IEmailService emailService) 
         {
@@ -42,6 +43,8 @@ namespace Service
             _resetPasswordService = new Lazy<ResetPasswordService>(() => new ResetPasswordService(emailService, userManager));
 
             _userService = new Lazy<UserService>(() => new UserService(userManager));
+
+            _jobPostService = new Lazy<JobPostService>(() => new JobPostService(repositoryManager, mapper));
         }
 
         public ICompanyAuthService CompanyService => _companyService.Value;
@@ -51,6 +54,7 @@ namespace Service
         public IAuthenticationService AuthenticationService => _authenticationService.Value;
         public IResetPasswordService ResetPasswordService => _resetPasswordService.Value;
         public IUserService UserService => _userService.Value;
+        public IJobPostService JobPostService => _jobPostService.Value;
 
     }
 }
