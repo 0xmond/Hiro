@@ -141,3 +141,16 @@ D:\Main F\CS\4TH\Graduation Project\Implementation\V16\Hiro\Entities\obj\Debug\n
 D:\Main F\CS\4TH\Graduation Project\Implementation\V16\Hiro\Entities\obj\Debug\net8.0\refint\Entities.dll
 D:\Main F\CS\4TH\Graduation Project\Implementation\V16\Hiro\Entities\obj\Debug\net8.0\Entities.pdb
 D:\Main F\CS\4TH\Graduation Project\Implementation\V16\Hiro\Entities\obj\Debug\net8.0\ref\Entities.dll
+C:\Users\20106\Source\Repos\Hiro\Entities\bin\Debug\net8.0\Entities.deps.json
+C:\Users\20106\Source\Repos\Hiro\Entities\bin\Debug\net8.0\Entities.dll
+C:\Users\20106\Source\Repos\Hiro\Entities\bin\Debug\net8.0\Entities.pdb
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\Entities.dll
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\refint\Entities.dll
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\Entities.pdb
+C:\Users\20106\Source\Repos\Hiro\Entities\obj\Debug\net8.0\ref\Entities.dll
