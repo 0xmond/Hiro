@@ -5487,19 +5487,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MONDY\\.nuget\\packages\\": {}
+    "C:\\Users\\20106\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Hiro\\Hiro.csproj",
+      "projectUniqueName": "C:\\Users\\20106\\source\\repos\\Hiro\\Hiro\\Hiro.csproj",
       "projectName": "Hiro",
-      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Hiro\\Hiro.csproj",
-      "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Hiro\\obj\\",
+      "projectPath": "C:\\Users\\20106\\source\\repos\\Hiro\\Hiro\\Hiro.csproj",
+      "packagesPath": "C:\\Users\\20106\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\20106\\source\\repos\\Hiro\\Hiro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\20106\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5507,26 +5507,27 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj"
+            "C:\\Users\\20106\\source\\repos\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj": {
+              "projectPath": "C:\\Users\\20106\\source\\repos\\Hiro\\Hiro.Presentation\\Hiro.Presentation.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\LoggerService\\LoggerService.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\LoggerService\\LoggerService.csproj"
+            "C:\\Users\\20106\\source\\repos\\Hiro\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "C:\\Users\\20106\\source\\repos\\Hiro\\LoggerService\\LoggerService.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Repository\\Repository.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Repository\\Repository.csproj"
+            "C:\\Users\\20106\\source\\repos\\Hiro\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\20106\\source\\repos\\Hiro\\Repository\\Repository.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Service.Contracts\\Service.Contracts.csproj"
+            "C:\\Users\\20106\\source\\repos\\Hiro\\Service.Contracts\\Service.Contracts.csproj": {
+              "projectPath": "C:\\Users\\20106\\source\\repos\\Hiro\\Service.Contracts\\Service.Contracts.csproj"
             },
-            "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Service\\Service.csproj": {
-              "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Service\\Service.csproj"
+            "C:\\Users\\20106\\source\\repos\\Hiro\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\20106\\source\\repos\\Hiro\\Service\\Service.csproj"
             }
           }
         }
@@ -5594,7 +5595,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

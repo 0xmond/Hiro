@@ -190,3 +190,21 @@ D:\Main F\CS\4TH\Graduation Project\Implementation\V16\Hiro\Contracts\obj\Debug\
 D:\Main F\CS\4TH\Graduation Project\Implementation\V16\Hiro\Contracts\obj\Debug\net8.0\refint\Contracts.dll
 D:\Main F\CS\4TH\Graduation Project\Implementation\V16\Hiro\Contracts\obj\Debug\net8.0\Contracts.pdb
 D:\Main F\CS\4TH\Graduation Project\Implementation\V16\Hiro\Contracts\obj\Debug\net8.0\ref\Contracts.dll
+C:\Users\20106\Source\Repos\Hiro\Contracts\bin\Debug\net8.0\Contracts.deps.json
+C:\Users\20106\Source\Repos\Hiro\Contracts\bin\Debug\net8.0\Contracts.dll
+C:\Users\20106\Source\Repos\Hiro\Contracts\bin\Debug\net8.0\Contracts.pdb
+C:\Users\20106\Source\Repos\Hiro\Contracts\bin\Debug\net8.0\Entities.dll
+C:\Users\20106\Source\Repos\Hiro\Contracts\bin\Debug\net8.0\Shared.dll
+C:\Users\20106\Source\Repos\Hiro\Contracts\bin\Debug\net8.0\Entities.pdb
+C:\Users\20106\Source\Repos\Hiro\Contracts\bin\Debug\net8.0\Shared.pdb
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.csproj.AssemblyReference.cache
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.sourcelink.json
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.csproj.Up2Date
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.dll
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\Contracts.pdb
+C:\Users\20106\Source\Repos\Hiro\Contracts\obj\Debug\net8.0\ref\Contracts.dll

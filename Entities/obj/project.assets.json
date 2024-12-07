@@ -815,19 +815,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MONDY\\.nuget\\packages\\": {}
+    "C:\\Users\\20106\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\20106\\Source\\Repos\\Hiro\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\MONDY\\.nuget\\packages\\",
-      "outputPath": "D:\\Main F\\CS\\4TH\\Graduation Project\\Implementation\\V16\\Hiro\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\20106\\Source\\Repos\\Hiro\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\20106\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\20106\\Source\\Repos\\Hiro\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MONDY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\20106\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -835,6 +835,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -879,7 +880,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
