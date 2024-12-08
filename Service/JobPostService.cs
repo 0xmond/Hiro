@@ -35,7 +35,7 @@ namespace Service
 
         public async Task<IEnumerable<JobPostDTO>> GetAllJobPostsAsync(bool trackChanges)
         {
-            var posts =  await _repositoryManager.JobPost.GetAllJobPostsAsync(trackChanges);
+            var posts = await _repositoryManager.JobPost.GetAllJobPostsAsync(trackChanges);
 
             var postsDto = _mapper.Map<IEnumerable<JobPostDTO>>(posts);
 
@@ -50,5 +50,23 @@ namespace Service
         public bool isValidPost(JobPost jobPost) => isValid(jobPost);
 
         public bool isOwnPost(string currentUserId, string postId) => isOwn(currentUserId, postId);
+
+        public async Task RegisterJobPostAsync(JobPostRegisterDTO jobPostRegisterDto)
+        {
+            if (jobPostRegisterDto == null)
+                throw new ArgumentNullException(nameof(jobPostRegisterDto));
+
+            var jobPostEntity = _mapper.Map<JobPost>(jobPostRegisterDto);
+
+            // Set default fields
+            jobPostEntity.Id = Guid.NewGuid();
+            jobPostEntity.CreatedAt = DateTime.UtcNow;
+            jobPostEntity.UpdatedAt = DateTime.UtcNow;
+
+            // Save to the repository
+            _repositoryManager.JobPost.CreateJobPost(jobPostEntity);
+            await _repositoryManager.SaveAsync();
+        }
     }
 }
+
