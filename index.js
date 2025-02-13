@@ -1,6 +1,5 @@
 import express from "express";
 import bootstrap from "./src/app.controller.js";
-import { createServer } from "@vercel/node"; // Vercel compatibility
 
 const app = express();
 
