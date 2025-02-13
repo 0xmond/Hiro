@@ -7,13 +7,7 @@ import cors from "cors";
 import profileRouter from "./modules/profile/profile.controller.js";
 
 const bootstrap = async (app, express) => {
-  app.use(
-    cors({
-      origin: "*",
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      allowedHeaders: ["Content-Type", "Authorization"],
-    })
-  );
+  app.use(cors());
 
   // parse request data
   app.use(express.json());
