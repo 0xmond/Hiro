@@ -7,7 +7,13 @@ import cors from "cors";
 import profileRouter from "./modules/profile/profile.controller.js";
 
 const bootstrap = async (app, express) => {
-  app.use(cors("*"));
+  app.use(
+    cors({
+      origin: "http://localhost:5173", // Replace with your frontend URL
+      methods: "GET,POST,PUT,DELETE",
+      credentials: true, // If using cookies or authorization headers
+    })
+  );
 
   // parse request data
   app.use(express.json());
