@@ -8,7 +8,9 @@ import {
   Roles,
 } from "../../utils/enum/index.js";
 
-const defaultProfilePic = "one.png";
+export const defaultPublicId = "default_duucnz";
+export const defaultSecureUrl =
+  "https://res.cloudinary.com/dbdv3lubq/image/upload/v1739568352/default_duucnz.png";
 
 // schema
 const baseUserSchema = new Schema(
@@ -50,9 +52,16 @@ const baseUserSchema = new Schema(
       required: true,
     },
     profilePicture: {
-      type: String,
-      required: true,
-      default: defaultProfilePic,
+      secure_url: {
+        type: String,
+        required: true,
+        default: defaultSecureUrl,
+      },
+      public_id: {
+        type: String,
+        required: true,
+        default: defaultPublicId,
+      },
     },
     address: {
       type: String,
@@ -81,6 +90,14 @@ export const Employee = User.discriminator(
     skills: { type: [String], enum: [...Object.values(Skills)] },
     experience: { type: String, enum: [...Object.values(Experiences)] },
     jobTitle: { type: String, enum: [...Object.values(JobTitle)] },
+    resume: {
+      secure_url: {
+        type: String,
+      },
+      public_id: {
+        type: String,
+      },
+    },
     companyId: {
       type: Types.ObjectId,
       ref: "Company",
@@ -106,7 +123,6 @@ export const Employee = User.discriminator(
         message: "Invalid hire date.",
       },
     },
-    resume: { type: String },
     github: { type: String },
     website: { type: String },
   })

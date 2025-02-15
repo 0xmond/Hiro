@@ -1,10 +1,9 @@
+import cors from "cors";
 import { connectDB } from "./db/db.connection.js";
-import { globalError } from "./utils/error/global-error.js";
-import { notFound } from "./utils/error/not-found.js";
 import authRouter from "./modules/auth/auth.controller.js";
 import jobPostRouter from "./modules/jobpost/jobpost.controller.js";
-import cors from "cors";
 import profileRouter from "./modules/profile/profile.controller.js";
+import { globalError, notFound } from "./utils/error/index.js";
 
 const bootstrap = async (app, express) => {
   app.use(

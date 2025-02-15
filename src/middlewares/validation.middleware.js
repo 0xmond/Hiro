@@ -3,6 +3,9 @@ import { Types } from "mongoose";
 export const isValid = (schema) => {
   return (req, res, next) => {
     const data = { ...req.body, ...req.query, ...req.params };
+
+    if (req.file || req.files) data.attachment = req.file || req.files;
+
     const result = schema.validate(data, { abortEarly: false });
 
     if (result.error) {
