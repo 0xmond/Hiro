@@ -5,8 +5,9 @@ import { isAuthenticate } from "../../middlewares/authentication.middleware.js";
 import { isAuthorized } from "../../middlewares/authorization.middleware.js";
 import { endpoint } from "./profile.endpoint.js";
 import { isValid } from "../../middlewares/validation.middleware.js";
-import { getProfile, uploadSingle } from "./profile.schema.js";
+import { getProfile } from "./profile.schema.js";
 import { fileFormats, uploadFile } from "../../utils/upload/multer.js";
+import { uploadSingle } from "../../utils/upload/single.validation.js";
 
 const router = Router();
 

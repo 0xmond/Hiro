@@ -96,7 +96,7 @@ export const updateJobPost = joi
 // get job post
 export const getJobPost = joi
   .object({
-    id: joi.string().custom(isValidId).required(),
+    id: joi.string().custom(isValidId).optional(),
   })
   .required();
 
@@ -136,3 +136,10 @@ export const search = joi.object({
   size: joi.number().less(20).optional(),
   page: joi.number().less(100).required(),
 });
+
+// archive job post
+export const archiveJobPost = joi
+  .object({
+    id: joi.string().custom(isValidId).required(),
+  })
+  .required();

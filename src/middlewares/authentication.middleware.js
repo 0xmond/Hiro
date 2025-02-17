@@ -1,4 +1,5 @@
 import { User } from "../db/models/user.model.js";
+import { Roles } from "../utils/enum/index.js";
 import { verifyToken } from "../utils/token/index.js";
 
 export const isAuthenticate = async (req, res, next) => {
@@ -15,7 +16,11 @@ export const isAuthenticate = async (req, res, next) => {
     password: 0,
     updatedAt: 0,
     isConfirmed: 0,
-  }).lean();
+  })
+    .populate([
+      { path: payload.role == Roles.EMPLOYEE ? "jobApplications" : "jobPosts" },
+    ])
+    .lean();
 
   // check token validity
   if (!user) return next(new Error("Invalid token", { cause: 400 }));

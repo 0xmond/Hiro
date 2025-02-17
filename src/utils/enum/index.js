@@ -260,3 +260,9 @@ export const Skills = [
   "Cryptography",
   "Security Auditing",
 ];
+
+export const ApplicationStatus = {
+  PENDING: "Pending",
+  ACCEPTED: "Accepted",
+  REJECTED: "Rejected",
+};

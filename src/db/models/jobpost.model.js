@@ -5,7 +5,7 @@ import { fieldMessages } from "../../utils/messages/field.messages.js";
 // schema
 const jobPostSchema = new Schema(
   {
-    companyId: {
+    company: {
       type: Types.ObjectId,
       required: true,
       ref: "Company",
@@ -53,8 +53,19 @@ const jobPostSchema = new Schema(
       default: false,
     },
   },
-  { timestamps: true, versionKey: false }
+  {
+    timestamps: true,
+    versionKey: false,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  }
 );
+
+jobPostSchema.virtual("jobApplications", {
+  ref: "JobApplication",
+  localField: "_id",
+  foreignField: "jobPost",
+});
 
 // model
 export const JobPost = model("JobPost", jobPostSchema);

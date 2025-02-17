@@ -78,63 +78,73 @@ const baseUserSchema = new Schema(
 // model
 export const User = model("User", baseUserSchema);
 
-export const Employee = User.discriminator(
-  Roles.EMPLOYEE,
-  new Schema({
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
-    dob: { type: Date, required: true },
-    gender: { type: String, enum: [...Object.values(Genders)], required: true },
-    isEmployed: { type: Boolean, default: false },
-    education: { type: String },
-    skills: { type: [String], enum: [...Object.values(Skills)] },
-    experience: { type: String, enum: [...Object.values(Experiences)] },
-    jobTitle: { type: String, enum: [...Object.values(JobTitle)] },
-    resume: {
-      secure_url: {
-        type: String,
-      },
-      public_id: {
-        type: String,
-      },
+const employeeSchema = new Schema({
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  dob: { type: Date, required: true },
+  gender: { type: String, enum: [...Object.values(Genders)], required: true },
+  isEmployed: { type: Boolean, default: false },
+  education: { type: String },
+  skills: { type: [String], enum: [...Object.values(Skills)] },
+  experience: { type: String, enum: [...Object.values(Experiences)] },
+  jobTitle: { type: String, enum: [...Object.values(JobTitle)] },
+  resume: {
+    secure_url: {
+      type: String,
     },
-    companyId: {
-      type: Types.ObjectId,
-      ref: "Company",
-      validate: {
-        validator: function (value) {
-          if (!this.isEmployed && value) {
-            return false;
-          }
-          return true;
-        },
-        message: "Invalid company assignment.",
-      },
+    public_id: {
+      type: String,
     },
-    hireDate: {
-      type: Date,
-      validate: {
-        validator: function (value) {
-          if (!this.isEmployed && value) {
-            return false;
-          }
-          return true;
-        },
-        message: "Invalid hire date.",
+  },
+  company: {
+    type: Types.ObjectId,
+    ref: "Company",
+    validate: {
+      validator: function (value) {
+        if (!this.isEmployed && value) {
+          return false;
+        }
+        return true;
       },
+      message: "Invalid company assignment.",
     },
-    github: { type: String },
-    website: { type: String },
-  })
-);
+  },
+  hireDate: {
+    type: Date,
+    validate: {
+      validator: function (value) {
+        if (!this.isEmployed && value) {
+          return false;
+        }
+        return true;
+      },
+      message: "Invalid hire date.",
+    },
+  },
+  github: { type: String },
+  website: { type: String },
+});
 
-export const Company = User.discriminator(
-  Roles.COMPANY,
-  new Schema({
-    companyName: { type: String, required: true },
-    address: { type: String, required: true },
-    aboutCompany: { type: String },
-    jobPosts: [{ type: Types.ObjectId, ref: "JobPost" }],
-    employeesCount: { type: Number, default: 0 },
-  })
-);
+employeeSchema.virtual("jobApplications", {
+  ref: "JobApplication",
+  localField: "profileId",
+  foreignField: "employee",
+});
+
+export const Employee = User.discriminator(Roles.EMPLOYEE, employeeSchema);
+
+const companySchema = new Schema({
+  companyName: { type: String, required: true },
+  address: { type: String, required: true },
+  aboutCompany: { type: String },
+  // jobPosts: [{ type: Types.ObjectId, ref: "JobPost" }],
+  employeesCount: { type: Number, default: 0 },
+});
+
+companySchema.virtual("jobPosts", {
+  ref: "JobPost",
+  localField: "profileId",
+  foreignField: "company",
+});
+
+export const Company = User.discriminator(Roles.COMPANY, companySchema);

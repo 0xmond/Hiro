@@ -8,31 +8,12 @@ import {
   User,
 } from "../../db/models/user.model.js";
 import { Roles } from "../../utils/enum/index.js";
+import {
+  hideUserSensitiveData,
+  userHiddenData,
+} from "../../utils/hidden/index.js";
 import cloudinary from "../../utils/upload/cloudinary.js";
 import { updateProfileSchema } from "./profile.schema.js";
-
-function hideSensitiveData(user) {
-  const {
-    _id,
-    createdAt,
-    updatedAt,
-    isConfirmed,
-    role,
-    isEmployed,
-    password,
-    ...filteredUser
-  } = user;
-  return filteredUser;
-}
-
-const userHiddenData = {
-  _id: 0,
-  createdAt: 0,
-  updatedAt: 0,
-  isConfirmed: 0,
-  isEmployed: 0,
-  password: 0,
-};
 
 export const getProfile = async (req, res, next) => {
   // parse id from query params
@@ -47,7 +28,7 @@ export const getProfile = async (req, res, next) => {
   // check if the visited user is company
   if (user.role == Roles.COMPANY) {
     const jobPosts = await JobPost.find(
-      { companyId: user.profileId, archived: false },
+      { company: user.profileId, archived: false },
       { _id: 1 }
     ).lean();
     user.jobPosts = jobPosts;
@@ -81,7 +62,7 @@ export const updateProfile = async (req, res, next) => {
   ).lean();
 
   // hide sensitive data
-  const filteredUser = hideSensitiveData(user);
+  const filteredUser = hideUserSensitiveData(user);
 
   // send success response
   return res.status(200).json({ success: true, data: { ...filteredUser } });
@@ -107,7 +88,7 @@ export const updateProfilePicture = async (req, res, next) => {
     { new: true }
   ).lean();
 
-  const filteredUser = hideSensitiveData(user);
+  const filteredUser = hideUserSensitiveData(user);
   return res.status(200).json({ success: true, data: filteredUser });
 };
 
@@ -132,7 +113,7 @@ export const deleteProfilePicture = async (req, res, next) => {
     { new: true }
   ).lean();
 
-  const filteredUser = hideSensitiveData(user);
+  const filteredUser = hideUserSensitiveData(user);
 
   return res.status(200).json({ success: true, data: filteredUser });
 };
@@ -155,7 +136,7 @@ export const uploadResume = async (req, res, next) => {
     }
   ).lean();
 
-  const filteredEmployee = hideSensitiveData(employee);
+  const filteredEmployee = hideUserSensitiveData(employee);
   return res.status(200).json({ success: true, data: filteredEmployee });
 };
 

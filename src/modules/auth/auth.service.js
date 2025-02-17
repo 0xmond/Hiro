@@ -5,6 +5,7 @@ import { Skills, Roles } from "../../utils/enum/index.js";
 import { compare, hash } from "../../utils/hash/index.js";
 import { entityMessages, fieldMessages } from "../../utils/messages/index.js";
 import { generateToken, verifyToken } from "../../utils/token/index.js";
+import { decode } from "jsonwebtoken";
 
 export const localhost = "http://localhost:3000";
 export const frontend = "https://hiro-one.vercel.app";

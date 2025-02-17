@@ -4,11 +4,7 @@ import { Company } from "../../db/models/user.model.js";
 // import { client } from "../../db/redis.connection.js";
 import { Skills } from "../../utils/enum/index.js";
 import { entityMessages } from "../../utils/messages/entity.messages.js";
-
-export const jobPostHiddenData = {
-  archived: 0,
-  updatedAt: 0,
-};
+import { jobPostHiddenData } from "../../utils/hidden/index.js";
 
 export const createJobPost = async (req, res, next) => {
   // parse request data
@@ -43,7 +39,7 @@ export const createJobPost = async (req, res, next) => {
 
   // create job post
   const jobPost = await JobPost.create({
-    companyId: req.user.profileId,
+    company: req.user.profileId,
     jobTitle,
     jobDescription,
     requiredSkills: validSkills,
@@ -56,13 +52,13 @@ export const createJobPost = async (req, res, next) => {
     applicationDeadline,
   });
 
-  // add post to company
-  const company = await Company.updateOne(
-    { _id: req.user._id },
-    {
-      $push: { jobPosts: jobPost._id },
-    }
-  );
+  // // add post to company
+  // const company = await Company.updateOne(
+  //   { _id: req.user._id },
+  //   {
+  //     $push: { jobPosts: jobPost._id },
+  //   }
+  // );
 
   // send success response
   return res.status(201).json({
@@ -78,17 +74,17 @@ export const deleteJobPost = async (req, res, next) => {
 
   const convertedId = new Types.ObjectId(id);
   // ensure that company owns the post
-  if (!req.user.jobPosts.some((postId) => postId.equals(convertedId)))
+  if (!req.user.jobPosts.some((post) => post._id.equals(convertedId)))
     return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
 
   // delete job post if exists
   const post = await JobPost.findByIdAndDelete(id);
 
-  // remove post id from job posts array in company
-  await Company.updateOne(
-    { _id: req.user._id },
-    { $pull: { jobPosts: post._id } }
-  );
+  // // remove post id from job posts array in company
+  // await Company.updateOne(
+  //   { _id: req.user._id },
+  //   { $pull: { jobPosts: post._id } }
+  // );
 
   // return success response
   return res.status(200).json({
@@ -103,7 +99,7 @@ export const updateJobPost = async (req, res, next) => {
 
   const convertedId = new Types.ObjectId(id);
   // ensure that company owns the post
-  if (!req.user.jobPosts.some((postId) => postId.equals(convertedId)))
+  if (!req.user.jobPosts.some((post) => post._id.equals(convertedId)))
     return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
 
   // find post and update it
@@ -119,24 +115,6 @@ export const updateJobPost = async (req, res, next) => {
     message: entityMessages.jobPost.updatedSuccessfully,
     data: post,
   });
-};
-
-export const getJobPost = async (req, res, next) => {
-  // parse request data
-  const { id } = req.params;
-
-  // get job post
-  const post = await JobPost.findOne(
-    { _id: id, archived: false },
-    jobPostHiddenData
-  ).lean();
-
-  // check if the post is not valid
-  if (!post)
-    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
-
-  // send success response
-  return res.status(200).json({ success: true, data: post });
 };
 
 export const search = async (req, res, next) => {
@@ -174,4 +152,61 @@ export const search = async (req, res, next) => {
 
   // send success response
   return res.status(200).json({ success: true, data: posts });
+};
+
+export const getJobPost = async (req, res, next) => {
+  // parse request data
+  const { id } = req.params;
+
+  const filter = { archived: false };
+  if (id) filter._id = id;
+
+  // get job post
+  const posts = await JobPost.find(filter, jobPostHiddenData).lean();
+
+  // check if the post is not valid
+  if (!posts.length)
+    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
+
+  // send success response
+  return res.status(200).json({ success: true, data: posts });
+};
+
+export const getArchivedJobPosts = async (req, res, next) => {
+  // get job post
+  const posts = await JobPost.find(
+    { company: req.user.profileId, archived: true },
+    jobPostHiddenData
+  ).lean();
+
+  // check if the post is not valid
+  if (!posts.length) return next(new Error("Empty", { cause: 404 }));
+
+  // send success response
+  return res.status(200).json({ success: true, data: posts });
+};
+
+export const archiveJobPost = async (req, res, next) => {
+  // parse request data
+  const { id } = req.params;
+
+  const convertedId = new Types.ObjectId(id);
+  // ensure that company owns the post
+  if (!req.user.jobPosts.some((post) => post._id.equals(convertedId)))
+    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
+
+  // find post and update it
+  const post = await JobPost.findById(id).lean();
+
+  const updatedPost = await JobPost.findByIdAndUpdate(
+    id,
+    { archived: post.archived ? false : true },
+    { new: true }
+  ).lean();
+
+  // send success response
+  return res.status(200).json({
+    success: true,
+    message: entityMessages.jobPost.updatedSuccessfully,
+  });
 };

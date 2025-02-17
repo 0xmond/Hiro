@@ -6,4 +6,6 @@ export const endpoint = {
   updateJobPost: [Roles.COMPANY],
   getJobPost: [Roles.COMPANY, Roles.EMPLOYEE],
   search: [Roles.COMPANY, Roles.EMPLOYEE],
+  getArchivedJobPosts: [Roles.COMPANY],
+  archiveJobPost: [Roles.COMPANY],
 };

@@ -7,6 +7,7 @@ import {
 import { asyncHandler } from "../../utils/error/async-handler.js";
 import { endpoint } from "./jobpost.endpoint.js";
 import {
+  archiveJobPost,
   createJobPost,
   deleteJobPost,
   getJobPost,
@@ -14,13 +15,18 @@ import {
   updateJobPost,
 } from "./jobpost.schema.js";
 import * as jobPostService from "./jobpost.service.js";
+import jobApplicationRouter from "../job.application/job.application.controller.js";
 
 const router = Router();
+
+router.use(asyncHandler(isAuthenticate));
+
+// job application router
+router.use("/:postId/apply", jobApplicationRouter);
 
 // create job post
 router.post(
   "/",
-  asyncHandler(isAuthenticate),
   isAuthorized(endpoint.createJobPost),
   isValid(createJobPost),
   asyncHandler(jobPostService.createJobPost)
@@ -29,7 +35,6 @@ router.post(
 // delete job post
 router.delete(
   "/:id",
-  asyncHandler(isAuthenticate),
   isAuthorized(endpoint.deleteJobPost),
   isValid(deleteJobPost),
   asyncHandler(jobPostService.deleteJobPost)
@@ -38,28 +43,40 @@ router.delete(
 // update job post
 router.put(
   "/:id",
-  asyncHandler(isAuthenticate),
   isAuthorized(endpoint.updateJobPost),
   isValid(updateJobPost),
   asyncHandler(jobPostService.updateJobPost)
 );
 
+// search
+router.get(
+  "/search",
+  isAuthorized(endpoint.search),
+  isValid(search),
+  asyncHandler(jobPostService.search)
+);
+
+// get archived job post
+router.get(
+  "/archived",
+  isAuthorized(endpoint.getArchivedJobPosts),
+  asyncHandler(jobPostService.getArchivedJobPosts)
+);
+
 // get job post
 router.get(
-  "/:id",
-  asyncHandler(isAuthenticate),
+  "/:id?",
   isAuthorized(endpoint.getJobPost),
   isValid(getJobPost),
   asyncHandler(jobPostService.getJobPost)
 );
 
-// search
-router.get(
-  "/search",
-  asyncHandler(isAuthenticate),
-  isAuthorized(endpoint.search),
-  isValid(search),
-  asyncHandler(jobPostService.search)
+// archive job post
+router.patch(
+  "/:id",
+  isAuthorized(endpoint.archiveJobPost),
+  isValid(archiveJobPost),
+  asyncHandler(jobPostService.archiveJobPost)
 );
 
 export default router;
