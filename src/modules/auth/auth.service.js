@@ -90,13 +90,13 @@ export const companyRegister = async (req, res, next) => {
     },
   });
 
-  // const isSent = await sendEmail({
-  //   to: email,
-  //   subject: "Email Confirmation",
-  //   html: `<h1>Thanks for trusting us</h1><br><p>To activate your account, please click <a href="${host}/auth/confirm?token=${token}">here</a></p>`,
-  // });
+  const isSent = await sendEmail({
+    to: email,
+    subject: "Email Confirmation",
+    html: `<h1>Thanks for trusting us</h1><br><p>To activate your account, please click <a href="${host}/auth/confirm?token=${token}">here</a></p>`,
+  });
 
-  // if (!isSent) return next(new Error("Please try again later", { cause: 500 }));
+  if (!isSent) return next(new Error("Please try again later", { cause: 500 }));
 
   req.body.password = undefined;
   // send success response
