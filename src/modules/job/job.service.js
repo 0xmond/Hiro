@@ -1,17 +1,17 @@
-import { Types } from "mongoose";
-import { JobPost } from "../../db/models/jobpost.model.js";
-import { Company } from "../../db/models/user.model.js";
-// import { client } from "../../db/redis.connection.js";
-import { Skills } from "../../utils/enum/index.js";
-import { entityMessages } from "../../utils/messages/entity.messages.js";
+import { JobPost } from "../../db/models/job.model.js";
+import { Roles, Skills } from "../../utils/enum/index.js";
 import { jobPostHiddenData } from "../../utils/hidden/index.js";
+import { entityMessages } from "../../utils/messages/entity.messages.js";
+import { evaluateResume } from "../../utils/resume/evaluate-resume.js";
 
 export const createJobPost = async (req, res, next) => {
   // parse request data
   const {
     jobTitle,
+    jobCategory,
     requiredSkills,
     location,
+    city,
     country,
     salary,
     jobPeriod,
@@ -25,13 +25,6 @@ export const createJobPost = async (req, res, next) => {
   jobDescription = `Job Title: ${jobTitle}\n` + jobDescription;
 
   // get valid skills
-  // const results = await Promise.all(
-  //   requiredSkills.map((skill) => client.sIsMember("skills", skill))
-  // );
-  // const validSkills = requiredSkills.filter(
-  //   (skill, index) => results[index] == true
-  // );
-
   let validSkills = [];
   requiredSkills.forEach((element) => {
     if (Skills.includes(element)) validSkills.push(element);
@@ -39,26 +32,20 @@ export const createJobPost = async (req, res, next) => {
 
   // create job post
   const jobPost = await JobPost.create({
-    company: req.user.profileId,
+    companyId: req.user.profileId,
     jobTitle,
+    jobCategory,
     jobDescription,
     requiredSkills: validSkills,
     location,
     country,
     salary,
+    city,
     jobPeriod,
     jobType,
     experience,
     applicationDeadline,
   });
-
-  // // add post to company
-  // const company = await Company.updateOne(
-  //   { _id: req.user._id },
-  //   {
-  //     $push: { jobPosts: jobPost._id },
-  //   }
-  // );
 
   // send success response
   return res.status(201).json({
@@ -72,19 +59,15 @@ export const deleteJobPost = async (req, res, next) => {
   // parse request data
   const { id } = req.params;
 
-  const convertedId = new Types.ObjectId(id);
-  // ensure that company owns the post
-  if (!req.user.jobPosts.some((post) => post._id.equals(convertedId)))
-    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
-
   // delete job post if exists
-  const post = await JobPost.findByIdAndDelete(id);
+  const post = await JobPost.findOneAndDelete({
+    _id: id,
+    companyId: req.user.profileId,
+  });
 
-  // // remove post id from job posts array in company
-  // await Company.updateOne(
-  //   { _id: req.user._id },
-  //   { $pull: { jobPosts: post._id } }
-  // );
+  // ensure that job post exists
+  if (!post)
+    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
 
   // return success response
   return res.status(200).json({
@@ -97,17 +80,53 @@ export const updateJobPost = async (req, res, next) => {
   // parse request data
   const { id } = req.params;
 
-  const convertedId = new Types.ObjectId(id);
-  // ensure that company owns the post
-  if (!req.user.jobPosts.some((post) => post._id.equals(convertedId)))
-    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
+  const {
+    jobTitle,
+    jobCategory,
+    requiredSkills,
+    location,
+    country,
+    salary,
+    jobPeriod,
+    jobType,
+    experience,
+    applicationDeadline,
+  } = req.body;
+
+  // modify the description
+  let { jobDescription } = req.body;
+  jobDescription = `Job Title: ${jobTitle}\n${jobDescription}`;
+
+  if (req.body.requiredSkills) {
+    // get valid skills
+    var validSkills = [];
+    req.body.requiredSkills.forEach((element) => {
+      if (Skills.includes(element)) validSkills.push(element);
+    });
+  }
 
   // find post and update it
-  const post = await JobPost.findByIdAndUpdate(
-    id,
-    { ...req.body },
+  const post = await JobPost.findOneAndUpdate(
+    { _id: id, companyId: req.user.profileId },
+    {
+      jobTitle,
+      jobCategory,
+      requiredSkills: validSkills,
+      location,
+      country,
+      salary,
+      jobPeriod,
+      jobType,
+      experience,
+      applicationDeadline,
+      jobDescription,
+    },
     { new: true }
   ).lean();
+
+  // ensure that job post exists
+  if (!post)
+    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
 
   // send success response
   return res.status(200).json({
@@ -131,23 +150,30 @@ export const search = async (req, res, next) => {
     },
   };
 
-  if (search) query.$text = { $search: search, $caseSensitive: false }; // search in text index
+  if (search) query.jobDescription = { $regex: search, $options: "i" };
 
-  if (location) query.location = { $regex: location, $options: "i" };
+  if (location) query.fullAddress = { $regex: location, $options: "i" };
 
   if (jobPeriod) query.jobPeriod = { $in: jobPeriod };
 
   if (experience) query.experience = { $in: experience };
 
-  if (jobType) query.experience = { $in: experience };
+  if (jobType) query.jobType = { $in: jobType };
 
   const posts = await JobPost.find(query, jobPostHiddenData, {
     skip: (page - 1) * size,
-    limit: size || 8,
-  });
+    limit: size,
+  })
+    .populate([
+      {
+        path: "company",
+        select: "profileId companyName profilePicture.secure_url -_id",
+      },
+    ])
+    .lean();
 
   // check if there is no posts match filters
-  if (posts.length < 1)
+  if (!posts.length)
     return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
 
   // send success response
@@ -158,11 +184,47 @@ export const getJobPost = async (req, res, next) => {
   // parse request data
   const { id } = req.params;
 
-  const filter = { archived: false };
+  const filter = {
+    archived: false,
+  };
   if (id) filter._id = id;
+  else filter.companyId = req.user.profileId;
 
   // get job post
-  const posts = await JobPost.find(filter, jobPostHiddenData).lean();
+  const posts = await JobPost.find(filter, jobPostHiddenData)
+    .populate([
+      { path: "company", select: "companyName profilePicture.secure_url -_id" },
+    ])
+    .lean();
+
+  // check if the post is not valid
+  if (!posts.length)
+    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
+
+  const evaluation = [];
+  if (req.user.role == Roles.EMPLOYEE) {
+    for (const post of posts) {
+      post.evaluation = await evaluateResume(
+        req.user.resumeText,
+        post.jobDescription
+      );
+    }
+  }
+
+  // send success response
+  return res.status(200).json({ success: true, data: posts });
+};
+
+export const getArchivedJobPosts = async (req, res, next) => {
+  // get job post
+  const posts = await JobPost.find(
+    { companyId: req.user.profileId, archived: true },
+    jobPostHiddenData
+  )
+    .populate([
+      { path: "company", select: "companyName profilePicture.secure_url -_id" },
+    ])
+    .lean();
 
   // check if the post is not valid
   if (!posts.length)
@@ -172,34 +234,21 @@ export const getJobPost = async (req, res, next) => {
   return res.status(200).json({ success: true, data: posts });
 };
 
-export const getArchivedJobPosts = async (req, res, next) => {
-  // get job post
-  const posts = await JobPost.find(
-    { company: req.user.profileId, archived: true },
-    jobPostHiddenData
-  ).lean();
-
-  // check if the post is not valid
-  if (!posts.length) return next(new Error("Empty", { cause: 404 }));
-
-  // send success response
-  return res.status(200).json({ success: true, data: posts });
-};
-
 export const archiveJobPost = async (req, res, next) => {
   // parse request data
   const { id } = req.params;
 
-  const convertedId = new Types.ObjectId(id);
-  // ensure that company owns the post
-  if (!req.user.jobPosts.some((post) => post._id.equals(convertedId)))
-    return next(new Error(entityMessages.jobPost.notFound, { cause: 404 }));
-
   // find post and update it
-  const post = await JobPost.findById(id).lean();
+  const post = await JobPost.findOne({
+    _id: id,
+    companyId: req.user.profileId,
+  }).lean();
 
-  const updatedPost = await JobPost.findByIdAndUpdate(
-    id,
+  const updatedPost = await JobPost.findOneAndUpdate(
+    {
+      _id: id,
+      companyId: req.user.profileId,
+    },
     { archived: post.archived ? false : true },
     { new: true }
   ).lean();

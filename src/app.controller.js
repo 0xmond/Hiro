@@ -1,15 +1,19 @@
 import cors from "cors";
 import { connectDB } from "./db/db.connection.js";
 import authRouter from "./modules/auth/auth.controller.js";
-import jobPostRouter from "./modules/job.post/jobpost.controller.js";
+import jobPostRouter from "./modules/job/job.controller.js";
 import profileRouter from "./modules/profile/profile.controller.js";
+import friendRouter from "./modules/community/friend/friend.controller.js";
+import followRouter from "./modules/community/follow/follow.controller.js";
+import postRouter from "./modules/community/post/post.controller.js";
+import feedRouter from "./modules/community/feed/feed.controller.js";
 import { globalError, notFound } from "./utils/error/index.js";
 
 const bootstrap = async (app, express) => {
   app.use(
     cors({
       origin: "http://localhost:5173", // Replace with your frontend URL
-      methods: "GET,POST,PUT,DELETE",
+      methods: "GET,POST,PUT,DELETE,PATCH",
       credentials: true, // If using cookies or authorization headers
     })
   );
@@ -27,6 +31,18 @@ const bootstrap = async (app, express) => {
 
   // profile router
   app.use("/profile", profileRouter);
+
+  // friend router
+  app.use("/friend", friendRouter);
+
+  // follow router
+  app.use("/follow", followRouter);
+
+  // post router
+  app.use("/post", postRouter);
+
+  // feed router
+  app.use("/feed", feedRouter);
 
   // handle not found pages
   app.all("*", notFound);

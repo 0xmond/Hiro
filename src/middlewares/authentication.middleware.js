@@ -18,7 +18,20 @@ export const isAuthenticate = async (req, res, next) => {
     isConfirmed: 0,
   })
     .populate([
-      { path: payload.role == Roles.EMPLOYEE ? "jobApplications" : "jobPosts" },
+      {
+        path: payload.role == Roles.EMPLOYEE ? "jobApplications" : "jobPosts",
+        populate:
+          payload.role == Roles.EMPLOYEE
+            ? {
+                path: "jobPost",
+                select: "jobTitle companyId",
+                populate: {
+                  path: "company",
+                  select: "companyName profilePicture.secure_url -_id ",
+                },
+              }
+            : undefined,
+      },
     ])
     .lean();
 

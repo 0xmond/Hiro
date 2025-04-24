@@ -3,45 +3,37 @@ import {
   ArabCountries,
   Experiences,
   JobPeriod,
-  JobTitle,
+  JobCategory,
   JobType,
   Skills,
+  Governorates,
 } from "../../utils/enum/index.js";
 import { isValidId } from "../../middlewares/validation.middleware.js";
 
 // create job post
 export const createJobPost = joi
   .object({
-    jobTitle: joi
+    jobCategory: joi
       .string()
-      .valid(...Object.values(JobTitle))
+      .valid(...Object.values(JobCategory))
       .required(),
+    jobTitle: joi.string().required(),
     jobDescription: joi.string().min(30).required(),
-    requiredSkills: joi
-      .array()
-      .items(
-        joi.string().required()
-        // .valid(...Skills)
-      )
-      .required(),
+    requiredSkills: joi.array().items(joi.string().required()).required(),
     location: joi.string().optional(),
     country: joi
       .string()
       .valid(...Object.values(ArabCountries))
       .required(),
+    city: joi.string().required(),
     salary: joi.number().optional(),
     jobPeriod: joi
       .string()
       .valid(...Object.values(JobPeriod))
       .required(),
     jobType: joi
-      .array()
-      .items(
-        joi
-          .string()
-          .required()
-          .valid(...Object.values(JobType))
-      )
+      .string()
+      .valid(...Object.values(JobType))
       .optional(),
     experience: joi
       .string()
@@ -61,15 +53,21 @@ export const deleteJobPost = joi
 export const updateJobPost = joi
   .object({
     id: joi.string().custom(isValidId).required(),
-    jobTitle: joi
+    jobCategory: joi
       .string()
-      .valid(...Object.values(JobTitle))
+      .valid(...Object.values(JobCategory))
       .optional(),
+    jobTitle: joi.string().optional(),
     jobDescription: joi.string().min(30).optional(),
+    requiredSkills: joi.array().items(joi.string().required()).optional(),
     location: joi.string().optional(),
     country: joi
       .string()
       .valid(...Object.values(ArabCountries))
+      .optional(),
+    city: joi
+      .string()
+      .valid(...Object.values(Governorates))
       .optional(),
     salary: joi.number().optional(),
     jobPeriod: joi
@@ -77,13 +75,8 @@ export const updateJobPost = joi
       .valid(...Object.values(JobPeriod))
       .optional(),
     jobType: joi
-      .array()
-      .items(
-        joi
-          .string()
-          .required()
-          .valid(...Object.values(JobType))
-      )
+      .string()
+      .valid(...Object.values(JobType))
       .optional(),
     experience: joi
       .string()
@@ -133,7 +126,7 @@ export const search = joi.object({
     .optional(),
   minSalary: joi.number().min(1).required(),
   maxSalary: joi.number().greater(joi.ref("minSalary")).required(),
-  size: joi.number().less(20).optional(),
+  size: joi.number().less(20).required(),
   page: joi.number().less(100).required(),
 });
 

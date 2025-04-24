@@ -1,18 +1,27 @@
 import { Schema, Types, model } from "mongoose";
-import { Experiences, JobPeriod, JobTitle } from "../../utils/enum/index.js";
+import {
+  Experiences,
+  JobPeriod,
+  JobCategory,
+  JobType,
+} from "../../utils/enum/index.js";
 import { fieldMessages } from "../../utils/messages/field.messages.js";
 
 // schema
 const jobPostSchema = new Schema(
   {
-    company: {
+    companyId: {
       type: Types.ObjectId,
       required: true,
       ref: "Company",
     },
     jobTitle: {
       type: String,
-      enum: [...Object.values(JobTitle)],
+      required: [true, fieldMessages.required("Job title")],
+    },
+    jobCategory: {
+      type: String,
+      enum: [...Object.values(JobCategory)],
       required: [true, fieldMessages.required("Job title")],
     },
     jobDescription: {
@@ -30,6 +39,16 @@ const jobPostSchema = new Schema(
       type: String,
       required: [true, fieldMessages.required("Country")],
     },
+    city: {
+      type: String,
+      required: [true, fieldMessages.required("City")],
+    },
+    fullAddress: {
+      type: String,
+      default: function () {
+        return `${this.location} ${this.city}, ${this.country}`;
+      },
+    },
     salary: {
       type: Number,
     },
@@ -37,6 +56,11 @@ const jobPostSchema = new Schema(
       type: String,
       enum: [...Object.values(JobPeriod)],
       required: [true, fieldMessages.required("Job period")],
+    },
+    jobType: {
+      type: String,
+      enum: [...Object.values(JobType)],
+      required: false,
     },
     experience: {
       type: String,
@@ -65,6 +89,12 @@ jobPostSchema.virtual("jobApplications", {
   ref: "JobApplication",
   localField: "_id",
   foreignField: "jobPost",
+});
+
+jobPostSchema.virtual("company", {
+  ref: "User",
+  localField: "companyId",
+  foreignField: "profileId",
 });
 
 // model

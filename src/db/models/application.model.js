@@ -9,7 +9,7 @@ const jobApplicationSchema = new Schema(
       required: true,
       ref: "JobPost",
     },
-    employee: {
+    employeeId: {
       type: Types.ObjectId,
       required: true,
       ref: "Employee",
@@ -34,8 +34,19 @@ const jobApplicationSchema = new Schema(
       default: ApplicationStatus.PENDING,
     },
   },
-  { timestamps: true, versionKey: false }
+  {
+    timestamps: true,
+    versionKey: false,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  }
 );
+
+jobApplicationSchema.virtual("employee", {
+  localField: "employeeId",
+  foreignField: "profileId",
+  ref: "Employee",
+});
 
 // model
 export const JobApplication = model("JobApplication", jobApplicationSchema);

@@ -1,7 +1,7 @@
-// // // import { Company } from "../../db/models/company.model.js";
-// // // import { Employee } from "../../db/models/employee.model.js";
-import { JobPost } from "../../db/models/jobpost.model.js";
+import { JobApplication } from "../../db/models/application.model.js";
+import { Post } from "../../db/models/post.model.js";
 import {
+  Company,
   defaultPublicId,
   defaultSecureUrl,
   Employee,
@@ -11,7 +11,10 @@ import { Roles } from "../../utils/enum/index.js";
 import {
   hideUserSensitiveData,
   userHiddenData,
+  communityHiddenData,
 } from "../../utils/hidden/index.js";
+import { entityMessages } from "../../utils/messages/entity.messages.js";
+import { extractTextFromPdf } from "../../utils/resume/test.js";
 import cloudinary from "../../utils/upload/cloudinary.js";
 import { updateProfileSchema } from "./profile.schema.js";
 
@@ -22,18 +25,68 @@ export const getProfile = async (req, res, next) => {
   // get user data
   const user = await User.findOne(
     { profileId: id ? id : req.user.profileId },
-    userHiddenData
-  ).lean();
+    { ...userHiddenData, ...communityHiddenData }
+  )
+    .populate([
+      { path: "jobPosts" },
+      {
+        path: "jobApplications",
+        populate: {
+          path: "jobPost",
+          select: "jobTitle companyId",
+          populate: {
+            path: "company",
+            select: "companyName profilePicture.secure_url -_id ",
+          },
+        },
+      },
+    ])
+    .lean();
 
-  // check if the visited user is company
-  if (user.role == Roles.COMPANY) {
-    const jobPosts = await JobPost.find(
-      { company: user.profileId, archived: false },
-      { _id: 1 }
-    ).lean();
-    user.jobPosts = jobPosts;
-  }
-  return res.status(200).json({ success: true, data: { ...user } });
+  if (!user)
+    return next(new Error(entityMessages.user.notFound, { cause: 404 }));
+
+  const posts = await Post.find({
+    archived: false,
+    publisherId: req.user.profileId,
+  })
+    .populate([
+      {
+        path: "publisher",
+        select:
+          "profilePicture.secure_url username firstName lastName companyName profileId -_id",
+        populate: {
+          path: "reacts",
+          populate: {
+            path: "user",
+            select:
+              "profilePicture.secure_url username firstName lastName companyName profileId -_id",
+          },
+        },
+      },
+    ])
+    .lean();
+
+  return res.status(200).json({ success: true, data: { user, posts } });
+};
+
+export const search = async (req, res, next) => {
+  // parse search terms from request query string
+  const { q } = req.query;
+
+  // get user
+  const users = await User.find({ username: { $regex: q, $options: "i" } })
+    .select(
+      "profileId username profilePicture.secure_url firstName lastName companyName role -_id"
+    )
+    .lean();
+
+  // check if there are no users exist
+  if (!users.length)
+    return next(new Error(entityMessages.user.notFound, { cause: 404 }));
+
+  // send success response
+  return res.status(200).json({ success: true, data: users });
 };
 
 export const updateProfile = async (req, res, next) => {
@@ -51,21 +104,67 @@ export const updateProfile = async (req, res, next) => {
   }
 
   // update user
-  const user = await User.findOneAndUpdate(
-    { _id: req.user._id },
-    req.body.email && req.body.email != req.user.email
-      ? { ...req.body, isConfirmed: false }
-      : req.body,
-    {
-      new: true,
-    }
-  ).lean();
+  if (req.user.role == Roles.EMPLOYEE) {
+    var user = await Employee.findOneAndUpdate(
+      { profileId: req.user.profileId },
+      req.body.email && req.body.email != req.user.email
+        ? { ...req.body, isConfirmed: false }
+        : req.body,
+      {
+        new: true,
+      }
+    ).lean();
+  } else {
+    var user = await Company.findOneAndUpdate(
+      { profileId: req.user.profileId },
+      req.body.email && req.body.email != req.user.email
+        ? { ...req.body, isConfirmed: false }
+        : req.body,
+      {
+        new: true,
+      }
+    ).lean();
+  }
+
+  // const user = await User.findOne(
+  //   { profileId: req.user.profileId }
+  // )
+
+  // await user.updateOne(
+  //   req.body.email && req.body.email != req.user.email
+  //     ? { ...req.body, isConfirmed: false }
+  //     : req.body
+  // );
 
   // hide sensitive data
   const filteredUser = hideUserSensitiveData(user);
 
   // send success response
-  return res.status(200).json({ success: true, data: { ...filteredUser } });
+  return res.status(200).json({ success: true, data: user });
+};
+
+export const updateSkills = async (req, res, next) => {
+  // parse skills from request body
+  const { skills } = req.body;
+
+  // // get valid skills
+  // let validSkills = [];
+  // skills.forEach((element) => {
+  //   if (Skills.includes(element)) validSkills.push(element);
+  // });
+
+  // update skills
+  const user = await Employee.updateOne(
+    { _id: req.user._id },
+    {
+      skills,
+    }
+  );
+
+  // send success response
+  return res
+    .status(200)
+    .json({ success: 200, message: entityMessages.user.updatedSuccessfully });
 };
 
 export const updateProfilePicture = async (req, res, next) => {
@@ -101,6 +200,7 @@ export const deleteProfilePicture = async (req, res, next) => {
     });
 
   await cloudinary.uploader.destroy(req.user.profilePicture.public_id);
+
   // update db
   const user = await User.findByIdAndUpdate(
     req.user._id,
@@ -120,17 +220,22 @@ export const deleteProfilePicture = async (req, res, next) => {
 
 export const uploadResume = async (req, res, next) => {
   // destroy old resume
-  if (req.user.resume)
+  if (req.user.resume?.public_id)
     await cloudinary.uploader.destroy(req.user.resume.public_id);
+
   // upload to cloud
   const { public_id, secure_url } = await cloudinary.uploader.upload(
     req.file.path,
     { folder: `hiro/pdf/resume/${req.user.profileId}` }
   );
+
   // update db
   const employee = await Employee.findOneAndUpdate(
     { _id: req.user._id },
-    { resume: { public_id, secure_url } },
+    {
+      resume: { public_id, secure_url },
+      resumeText: await extractTextFromPdf(secure_url),
+    },
     {
       new: true,
     }
@@ -140,9 +245,26 @@ export const uploadResume = async (req, res, next) => {
   return res.status(200).json({ success: true, data: filteredEmployee });
 };
 
-// export const test = async (req, res, next) => {
-//   const result = await cloudinary.uploader.upload(req.file.path, {
-//     folder: "hiro/pdf",
-//   });
-//   return res.json({ result });
-// };
+export const getEmployeeApplications = async (req, res, next) => {
+  const applications = await JobApplication.find({
+    employeeId: req.user.profileId,
+  })
+    .populate([
+      {
+        path: "jobPost",
+        select: "jobTitle companyId",
+        populate: {
+          path: "company",
+          select: "companyName profilePicture.secure_url -_id ",
+        },
+      },
+    ])
+    .lean();
+
+  if (!applications.length)
+    return next(
+      new Error(entityMessages.jobApplication.notFound, { cause: 404 })
+    );
+
+  return res.status(200).json({ success: true, data: applications });
+};

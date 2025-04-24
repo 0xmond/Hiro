@@ -1,12 +1,5 @@
 import { Schema, Types, model } from "mongoose";
-import { fieldMessages } from "../../utils/messages/index.js";
-import {
-  Experiences,
-  Genders,
-  JobTitle,
-  Skills,
-  Roles,
-} from "../../utils/enum/index.js";
+import { Genders, JobCategory, Skills, Roles } from "../../utils/enum/index.js";
 
 export const defaultPublicId = "default_duucnz";
 export const defaultSecureUrl =
@@ -66,17 +59,32 @@ const baseUserSchema = new Schema(
     address: {
       type: String,
     },
+    followersIds: [{ type: Types.ObjectId, ref: "User" }],
+    followingIds: [{ type: Types.ObjectId, ref: "User" }],
   },
   {
     discriminatorKey: "role",
     collection: "users",
     versionKey: false,
     timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
   }
 );
 
+baseUserSchema.virtual("followers", {
+  ref: "User",
+  localField: "followersIds",
+  foreignField: "profileId",
+});
+
+baseUserSchema.virtual("following", {
+  ref: "User",
+  localField: "followingIds",
+  foreignField: "profileId",
+});
+
 // model
-export const User = model("User", baseUserSchema);
 
 const employeeSchema = new Schema({
   firstName: { type: String, required: true },
@@ -84,10 +92,28 @@ const employeeSchema = new Schema({
   dob: { type: Date, required: true },
   gender: { type: String, enum: [...Object.values(Genders)], required: true },
   isEmployed: { type: Boolean, default: false },
-  education: { type: String },
+  education: [
+    {
+      degree: { type: String },
+      institution: { type: String },
+      location: { type: String },
+    },
+  ],
   skills: { type: [String], enum: [...Object.values(Skills)] },
-  experience: { type: String, enum: [...Object.values(Experiences)] },
-  jobTitle: { type: String, enum: [...Object.values(JobTitle)] },
+  experience: [
+    {
+      title: String,
+      company: String,
+      duration: {
+        from: { type: Date },
+        to: { type: Date },
+      },
+    },
+  ],
+  friendsIds: [{ type: Types.ObjectId, ref: "User" }],
+  friendRequestsIds: [{ type: Types.ObjectId, ref: "User" }],
+  friendRequestsSentIds: [{ type: Types.ObjectId, ref: "User" }],
+  jobTitle: { type: String, enum: [...Object.values(JobCategory)] },
   resume: {
     secure_url: {
       type: String,
@@ -95,6 +121,9 @@ const employeeSchema = new Schema({
     public_id: {
       type: String,
     },
+  },
+  resumeText: {
+    type: String,
   },
   company: {
     type: Types.ObjectId,
@@ -123,28 +152,38 @@ const employeeSchema = new Schema({
   },
   github: { type: String },
   website: { type: String },
+  twitter: { type: String },
 });
 
 employeeSchema.virtual("jobApplications", {
   ref: "JobApplication",
   localField: "profileId",
-  foreignField: "employee",
+  foreignField: "employeeId",
 });
-
-export const Employee = User.discriminator(Roles.EMPLOYEE, employeeSchema);
+employeeSchema.virtual("friends", {
+  ref: "User",
+  localField: "friendsIds",
+  foreignField: "profileId",
+});
+employeeSchema.virtual("friendRequests", {
+  ref: "User",
+  localField: "friendRequestsIds",
+  foreignField: "profileId",
+});
 
 const companySchema = new Schema({
   companyName: { type: String, required: true },
-  address: { type: String, required: true },
   aboutCompany: { type: String },
   // jobPosts: [{ type: Types.ObjectId, ref: "JobPost" }],
-  employeesCount: { type: Number, default: 0 },
+  employeesCount: { type: String },
 });
 
 companySchema.virtual("jobPosts", {
   ref: "JobPost",
   localField: "profileId",
-  foreignField: "company",
+  foreignField: "companyId",
 });
+export const User = model("User", baseUserSchema);
+export const Employee = User.discriminator(Roles.EMPLOYEE, employeeSchema);
 
 export const Company = User.discriminator(Roles.COMPANY, companySchema);

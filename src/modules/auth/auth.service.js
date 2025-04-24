@@ -6,8 +6,9 @@ import { compare, hash } from "../../utils/hash/index.js";
 import { entityMessages, fieldMessages } from "../../utils/messages/index.js";
 import { generateToken, verifyToken } from "../../utils/token/index.js";
 import { decode } from "jsonwebtoken";
+import { encrypt } from "../../utils/crypto/encryption.js";
 
-export const localhost = "http://localhost:3000";
+export const localhost = "http://localhost:5173";
 export const frontend = "https://hiro-one.vercel.app";
 export const host = "http://hiro.eu-4.evennode.com";
 
@@ -89,13 +90,13 @@ export const companyRegister = async (req, res, next) => {
     },
   });
 
-  const isSent = await sendEmail({
-    to: email,
-    subject: "Email Confirmation",
-    html: `<h1>Thanks for trusting us</h1><br><p>To activate your account, please click <a href="${host}/auth/confirm?token=${token}">here</a></p>`,
-  });
+  // const isSent = await sendEmail({
+  //   to: email,
+  //   subject: "Email Confirmation",
+  //   html: `<h1>Thanks for trusting us</h1><br><p>To activate your account, please click <a href="${host}/auth/confirm?token=${token}">here</a></p>`,
+  // });
 
-  if (!isSent) return next(new Error("Please try again later", { cause: 500 }));
+  // if (!isSent) return next(new Error("Please try again later", { cause: 500 }));
 
   req.body.password = undefined;
   // send success response
@@ -219,7 +220,8 @@ export const requestPasswordReset = async (req, res, next) => {
   // check user existence
   const responseMessage =
     "If this email exists, you will get password reset email in your inbox.";
-  if (!user) return next(new Error(responseMessage, { cause: 200 }));
+  if (!user)
+    return res.status(200).json({ success: true, message: responseMessage });
 
   // generate reset token
   const token = generateToken({ payload: { _id: user._id, email } });
@@ -228,7 +230,7 @@ export const requestPasswordReset = async (req, res, next) => {
   const isSent = await sendEmail({
     to: email,
     subject: "Password reset",
-    html: `<h1>Thanks for trusting us</h1><br><p>To reset your password, please click <a href="${frontend}/password-reset?token=${token}">here</a></p>`,
+    html: `<h1>Thanks for trusting us</h1><br><p>To reset your password, please click <a href="${localhost}/password-reset?token=${token}">here</a></p>`,
   });
 
   // check if email is not have been sent

@@ -1,13 +1,13 @@
 import { Router } from "express";
-import * as profileService from "./profile.service.js";
-import { asyncHandler } from "../../utils/error/async-handler.js";
 import { isAuthenticate } from "../../middlewares/authentication.middleware.js";
 import { isAuthorized } from "../../middlewares/authorization.middleware.js";
-import { endpoint } from "./profile.endpoint.js";
 import { isValid } from "../../middlewares/validation.middleware.js";
-import { getProfile } from "./profile.schema.js";
+import { asyncHandler } from "../../utils/error/async-handler.js";
 import { fileFormats, uploadFile } from "../../utils/upload/multer.js";
 import { uploadSingle } from "../../utils/upload/single.validation.js";
+import { endpoint } from "./profile.endpoint.js";
+import * as profileValidation from "./profile.schema.js";
+import * as profileService from "./profile.service.js";
 
 const router = Router();
 
@@ -15,11 +15,21 @@ router.use(asyncHandler(isAuthenticate));
 
 // get profile
 router.get(
-  "",
+  "/",
   isAuthorized(endpoint.getProfile),
-  isValid(getProfile),
+  isValid(profileValidation.getProfile),
   asyncHandler(profileService.getProfile)
 );
+
+// get job applications for specific employee
+router.get(
+  "/applications",
+  isAuthorized(endpoint.getEmployeeApplications),
+  asyncHandler(profileService.getEmployeeApplications)
+);
+
+// search users
+router.get("/search", isValid(profileValidation.search), profileService.search);
 
 // update profile
 router.put(
@@ -28,11 +38,19 @@ router.put(
   asyncHandler(profileService.updateProfile)
 );
 
+// update skills
+router.put(
+  "/skills",
+  isAuthorized(endpoint.updateSkills),
+  isValid(profileValidation.updateSkills),
+  asyncHandler(profileService.updateSkills)
+);
+
 // update profile picture
 router.patch(
   "/profile-picture",
   isAuthorized(endpoint.updateProfilePicture),
-  uploadFile(fileFormats.images).single("attachment"),
+  uploadFile(fileFormats.imageMimeTypes).single("attachment"),
   isValid(uploadSingle),
   asyncHandler(profileService.updateProfilePicture)
 );
@@ -44,11 +62,11 @@ router.delete(
   asyncHandler(profileService.deleteProfilePicture)
 );
 
-// update profile picture
+// upload resume
 router.patch(
   "/resume",
   isAuthorized(endpoint.uploadResume),
-  uploadFile(fileFormats.docs).single("attachment"),
+  uploadFile(fileFormats.documentMimeTypes).single("attachment"),
   isValid(uploadSingle),
   asyncHandler(profileService.uploadResume)
 );

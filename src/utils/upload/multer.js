@@ -1,8 +1,19 @@
 import multer, { diskStorage } from "multer";
 
 export const fileFormats = {
-  images: ["image/png", "image/jpeg"],
-  docs: ["application/pdf", "application/msword"],
+  imageMimeTypes: ["image/jpeg", "image/png"],
+
+  videoMimeTypes: [
+    "video/mp4",
+    "video/webm",
+    "video/quicktime", // MOV
+  ],
+
+  documentMimeTypes: [
+    "application/pdf",
+    "application/msword", // .doc
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
+  ],
 };
 
 export const uploadFile = (acceptedFormat) => {

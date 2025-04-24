@@ -1,4 +1,4 @@
-export const JobTitle = {
+export const JobCategory = {
   AI_ENGINEER: "AI Engineer",
   BACKEND_ENGINEER: "Backend Engineer",
   FRONTEND_ENGINEER: "Frontend Engineer",
@@ -13,6 +13,8 @@ export const JobTitle = {
   CLOUD_ENGINEER: "Cloud Engineer",
 };
 
+export const EmployeesCount = ["1-10", "11-20", "21-50", "51-100", "100+"];
+
 export const Experiences = {
   FRESHER: "Fresher",
   INTERMEDIATE: "Intermediate",
@@ -25,6 +27,19 @@ export const Genders = {
   MALE: "Male",
   FEMALE: "Female",
 };
+
+export const EducationDegrees = {
+  HIGH_SCHOOL: "High School",
+  ASSOCIATE: "Associate Degree",
+  BACHELOR: "Bachelor's Degree",
+  MASTER: "Master's Degree",
+  DOCTORATE: "Doctorate (PhD)",
+  DIPLOMA: "Diploma",
+  CERTIFICATE: "Certificate",
+  OTHER: "Other",
+};
+
+export default EducationDegrees;
 
 export const Roles = {
   COMPANY: "Company",
@@ -261,8 +276,55 @@ export const Skills = [
   "Security Auditing",
 ];
 
+export const Governorates = {
+  ALEXANDRIA: "Alexandria",
+  ASWAN: "Aswan",
+  ASYUT: "Asyut",
+  BEHERA: "Beheira",
+  BENI_SUEF: "Beni Suef",
+  CAIRO: "Cairo",
+  DAKAHLIYA: "Dakahliya",
+  DAMIETTA: "Damietta",
+  FAYOUM: "Fayoum",
+  GHARBIA: "Gharbia",
+  GIZA: "Giza",
+  ISMAILIA: "Ismailia",
+  KAFR_EL_SHEIKH: "Kafr El-Sheikh",
+  LUXOR: "Luxor",
+  MATROUH: "Matrouh",
+  MINYA: "Minya",
+  MONUFIA: "Monufia",
+  NEW_VALLEY: "New Valley",
+  NORTH_SINAI: "North Sinai",
+  PORT_SAID: "Port Said",
+  QALYUBIA: "Qalyubia",
+  QENA: "Qena",
+  RED_SEA: "Red Sea",
+  SHARQIYA: "Sharqiya",
+  SOHAG: "Sohag",
+  SOUTH_SINAI: "South Sinai",
+  SUEZ: "Suez",
+};
+
 export const ApplicationStatus = {
   PENDING: "Pending",
   ACCEPTED: "Accepted",
   REJECTED: "Rejected",
+};
+
+export const ApplicationResponse = {
+  ACCEPT: "Accept",
+  REJECT: "Reject",
+};
+
+export const Reactions = {
+  LIKE: "Like",
+  LOVE: "Love",
+  FUNNY: "Funny",
+  CELEBRATE: "Celebrate",
+};
+
+export const CommunityEntities = {
+  POST: "Post",
+  COMMENT: "Comment",
 };

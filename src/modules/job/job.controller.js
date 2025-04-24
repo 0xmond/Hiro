@@ -5,7 +5,7 @@ import {
   isValid,
 } from "../../middlewares/index.js";
 import { asyncHandler } from "../../utils/error/async-handler.js";
-import { endpoint } from "./jobpost.endpoint.js";
+import { endpoint } from "./job.endpoint.js";
 import {
   archiveJobPost,
   createJobPost,
@@ -13,16 +13,16 @@ import {
   getJobPost,
   search,
   updateJobPost,
-} from "./jobpost.schema.js";
-import * as jobPostService from "./jobpost.service.js";
-import jobApplicationRouter from "../job.application/job.application.controller.js";
+} from "./job.schema.js";
+import * as jobPostService from "./job.service.js";
+import jobApplicationRouter from "../application/application.controller.js";
 
 const router = Router();
 
 router.use(asyncHandler(isAuthenticate));
 
 // job application router
-router.use("/:postId/apply", jobApplicationRouter);
+router.use("/:postId/application", jobApplicationRouter);
 
 // create job post
 router.post(

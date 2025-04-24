@@ -25,3 +25,15 @@ export const userHiddenData = {
   isEmployed: 0,
   password: 0,
 };
+
+export const communityHiddenData = {
+  friendRequestsIds: 0,
+  friendRequests: 0,
+  friendsIds: 0,
+  followersIds: 0,
+  followingIds: 0,
+};
+
+export const jobApplicationHiddenData = {
+  updatedAt: 0,
+};

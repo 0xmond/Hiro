@@ -1,10 +1,12 @@
 import joi from "joi";
 import { isValidId } from "../../middlewares/validation.middleware.js";
-import {
+import EducationDegrees, {
+  EmployeesCount,
   Experiences,
   Genders,
-  JobTitle,
+  JobCategory,
   Roles,
+  Skills,
 } from "../../utils/enum/index.js";
 
 export const getProfile = joi
@@ -55,19 +57,35 @@ export const updateProfileSchema = (key) =>
           then: joi.optional(),
           otherwise: joi.forbidden(),
         }),
-      education: joi.string().when("$key", {
-        is: Roles.EMPLOYEE,
-        then: joi.optional(),
-        otherwise: joi.forbidden(),
-      }),
-      skills: joi.array().items(joi.string()).when("$key", {
-        is: Roles.EMPLOYEE,
-        then: joi.optional(),
-        otherwise: joi.forbidden(),
-      }),
+      education: joi
+        .array()
+        .items(
+          joi.object({
+            degree: joi
+              .string()
+              .valid(...Object.values(EducationDegrees))
+              .required(),
+            institution: joi.string().required(),
+            location: joi.string().required(),
+          })
+        )
+        .when("$key", {
+          is: Roles.EMPLOYEE,
+          then: joi.optional(),
+          otherwise: joi.forbidden(),
+        }),
       experience: joi
-        .string()
-        .valid(...Object.values(Experiences))
+        .array()
+        .items({
+          title: joi
+            .string()
+            .valid(...Object.values(JobCategory))
+            .required(),
+          company: joi.string().required(),
+          duration: joi
+            .object({ from: joi.date().required(), to: joi.date().required() })
+            .required(),
+        })
         .when("$key", {
           is: Roles.EMPLOYEE,
           then: joi.optional(),
@@ -75,7 +93,7 @@ export const updateProfileSchema = (key) =>
         }),
       jobTitle: joi
         .string()
-        .valid(...Object.values(JobTitle))
+        .valid(...Object.values(JobCategory))
         .when("$key", {
           is: Roles.EMPLOYEE,
           then: joi.optional(),
@@ -89,6 +107,14 @@ export const updateProfileSchema = (key) =>
           then: joi.optional(),
           otherwise: joi.forbidden(),
         }),
+      twitter: joi
+        .string()
+        .pattern(/^https?:\/\/(?:www\.)?x\.com\/[a-zA-Z0-9_]+\/?$/)
+        .when("$key", {
+          is: Roles.EMPLOYEE,
+          then: joi.optional(),
+          otherwise: joi.forbidden(),
+        }),
 
       // Only allowed when key is (Company)
       companyName: joi.string().min(2).when("$key", {
@@ -96,6 +122,14 @@ export const updateProfileSchema = (key) =>
         then: joi.optional(),
         otherwise: joi.forbidden(),
       }),
+      employeesCount: joi
+        .string()
+        .valid(...Object.values(EmployeesCount))
+        .when("$key", {
+          is: Roles.COMPANY,
+          then: joi.optional(),
+          otherwise: joi.forbidden(),
+        }),
       aboutCompany: joi.string().min(30).optional().when("$key", {
         is: Roles.COMPANY,
         then: joi.optional(),
@@ -103,3 +137,27 @@ export const updateProfileSchema = (key) =>
       }),
     })
     .required();
+
+export const search = joi
+  .object({
+    // type: joi
+    //   .string()
+    //   .valid(...Object.values(Roles))
+    //   .required(),
+    q: joi.string().required(),
+  })
+  .required();
+
+export const updateSkills = joi
+  .object({
+    skills: joi
+      .array()
+      .items(
+        joi
+          .string()
+          .valid(...Object.values(Skills))
+          .required()
+      )
+      .required(),
+  })
+  .required();
