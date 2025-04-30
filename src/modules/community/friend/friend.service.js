@@ -15,11 +15,11 @@ export const sendOrCancelFriendRequest = async (req, res, next) => {
     );
 
   // if they already friends => fail
-  if (req.user.friendsIds.some((f) => f.equals(id)))
+  if (req.user.friendsIds?.some((f) => f.equals(id)))
     return next(new Error("You are already friends", { cause: 400 }));
 
   // if the user sent a friend request to the logged in user
-  if (req.user.friendRequestsIds.some((f) => f.equals(id)))
+  if (req.user.friendRequestsIds?.some((f) => f.equals(id)))
     return next(
       new Error("This user already sent you a friend request", { cause: 400 })
     );
@@ -33,7 +33,6 @@ export const sendOrCancelFriendRequest = async (req, res, next) => {
 
   // update => if exist, remove it and if not, add it
   const requestExists = employee.friendRequestsIds.includes(req.user.profileId);
-  console.log(requestExists);
 
   const update = requestExists
     ? { $pull: { friendRequestsIds: req.user.profileId } }
@@ -96,13 +95,13 @@ export const approveOrDeclineFriendRequest = async (req, res, next) => {
   const { action } = req.body;
 
   // if they already friends => fail
-  if (req.user.friendsIds.some((f) => f.equals(id)))
+  if (req.user.friendsIds?.some((f) => f.equals(id)))
     return next(new Error("You are already friends", { cause: 400 }));
 
   console.log({ user });
 
   // if the user approve a non-exist request
-  if (!req.user.friendRequestsIds.some((reqId) => reqId.equals(id)))
+  if (!req.user.friendRequestsIds?.some((reqId) => reqId.equals(id)))
     return next(
       new Error(entityMessages.friendRequest.notFound, { cause: 404 })
     );
