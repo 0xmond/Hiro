@@ -1,4 +1,3 @@
-import cors from "cors";
 import { connectDB } from "./db/db.connection.js";
 import authRouter from "./modules/auth/auth.controller.js";
 import jobPostRouter from "./modules/job/job.controller.js";
@@ -7,17 +6,10 @@ import friendRouter from "./modules/community/friend/friend.controller.js";
 import followRouter from "./modules/community/follow/follow.controller.js";
 import postRouter from "./modules/community/post/post.controller.js";
 import feedRouter from "./modules/community/feed/feed.controller.js";
+import quizRouter from "./modules/quiz/quiz.controller.js";
 import { globalError, notFound } from "./utils/error/index.js";
 
 const bootstrap = async (app, express) => {
-  app.use(
-    cors({
-      origin: "http://localhost:5173", // Replace with your frontend URL
-      methods: "GET,POST,PUT,DELETE,PATCH",
-      credentials: true, // If using cookies or authorization headers
-    })
-  );
-
   // parse request data
   app.use(express.json());
 
@@ -43,6 +35,9 @@ const bootstrap = async (app, express) => {
 
   // feed router
   app.use("/feed", feedRouter);
+
+  // skill quiz router
+  app.use("/skill", quizRouter);
 
   // handle not found pages
   app.all("*", notFound);

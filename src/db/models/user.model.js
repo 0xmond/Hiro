@@ -99,7 +99,12 @@ const employeeSchema = new Schema({
       location: { type: String },
     },
   ],
-  skills: { type: [String], enum: [...Object.values(Skills)] },
+  skills: [
+    {
+      skill: { type: String, enum: [...Object.values(Skills)] },
+      verified: { type: Boolean, default: false },
+    },
+  ],
   experience: [
     {
       title: String,

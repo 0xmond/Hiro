@@ -98,8 +98,6 @@ export const approveOrDeclineFriendRequest = async (req, res, next) => {
   if (req.user.friendsIds?.some((f) => f.equals(id)))
     return next(new Error("You are already friends", { cause: 400 }));
 
-  console.log({ user });
-
   // if the user approve a non-exist request
   if (!req.user.friendRequestsIds?.some((reqId) => reqId.equals(id)))
     return next(

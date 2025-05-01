@@ -175,6 +175,8 @@ export const resendConfirmEmail = async (req, res, next) => {
 
 // login
 export const login = async (req, res, next) => {
+  console.log(req.body);
+
   // parse request data
   const { email, username, password } = req.body;
 

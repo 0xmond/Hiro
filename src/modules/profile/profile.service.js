@@ -147,17 +147,16 @@ export const updateSkills = async (req, res, next) => {
   // parse skills from request body
   const { skills } = req.body;
 
-  // // get valid skills
-  // let validSkills = [];
-  // skills.forEach((element) => {
-  //   if (Skills.includes(element)) validSkills.push(element);
-  // });
-
   // update skills
   const user = await Employee.updateOne(
     { _id: req.user._id },
     {
-      skills,
+      skills: skills.map((s) => ({
+        skill: s,
+        verified: req.user.skills?.some((us) => {
+          if (us.skill == s && us.verified == true) return true;
+        }),
+      })),
     }
   );
 
