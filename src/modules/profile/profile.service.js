@@ -48,7 +48,7 @@ export const getProfile = async (req, res, next) => {
 
   const posts = await Post.find({
     archived: false,
-    publisherId: req.user.profileId,
+    publisherId: id ? id : req.user.profileId,
   })
     .populate([
       {

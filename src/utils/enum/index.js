@@ -16,7 +16,7 @@ export const JobCategory = {
 export const EmployeesCount = ["1-10", "11-20", "21-50", "51-100", "100+"];
 
 export const Experiences = {
-  FRESHER: "Fresher",
+  JUNIOR: "Junior",
   INTERMEDIATE: "Intermediate",
   EXPERT: "Expert",
   NO_EXPERIENCE: "No Experience",

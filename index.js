@@ -10,6 +10,12 @@ app.use(
     credentials: true, // If using cookies or authorization headers
   })
 );
+app.use((req, res, next) => {
+  console.log(req.method + " -> " + req.url);
+  console.log("---------------------------------------");
+
+  return next();
+});
 bootstrap(app, express);
 
 const port = process.env.PORT || 3000;
