@@ -4,7 +4,7 @@ import fs from "fs";
 export const extractTextFromImage = async (image) => {
   try {
     // For Google Generative AI, we need to convert the image to a specific format
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     // Read image file
     const imageData = fs.readFileSync(image.path);
@@ -27,7 +27,7 @@ export const extractTextFromImage = async (image) => {
     Only include the skills, no explanations or other text.`;
 
     const result = await model.generateContent([prompt, ...imageParts]);
-    const response = await result.response;
+    const response = result.response;
     const skillsText = response.text().trim();
     const skills = skillsText
       .split(",") // Split by commas

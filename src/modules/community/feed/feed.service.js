@@ -6,7 +6,8 @@ export const getPosts = async (req, res, next) => {
   let posts;
   if (req.user.role == Roles.EMPLOYEE) {
     const skills = req.user.skills.map((s) => s.skill);
-    posts = await feed.getRankedPostsForEmployee(skills);
+
+    posts = await feed.getRankedPostsForEmployee(skills, req.user);
   } else {
     posts = await feed.getRankedPostsForCompany();
   }
