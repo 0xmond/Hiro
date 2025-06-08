@@ -1,16 +1,14 @@
 import { Types } from "mongoose";
 import { User } from "../../db/models/index.js";
 import { sendEmail } from "../../utils/email/index.js";
-import { Skills, Roles } from "../../utils/enum/index.js";
+import { Roles } from "../../utils/enum/index.js";
 import { compare, hash } from "../../utils/hash/index.js";
 import { entityMessages, fieldMessages } from "../../utils/messages/index.js";
 import { generateToken, verifyToken } from "../../utils/token/index.js";
-import { decode } from "jsonwebtoken";
-import { encrypt } from "../../utils/crypto/encryption.js";
 
 export const localhost = "http://localhost:5173";
 export const frontend = "https://hiro-one.vercel.app";
-export const host = "http://hiro.eu-4.evennode.com";
+export const host = "https://grad.britifyfix.co.uk";
 
 // employee and job seeker register
 export const employeeRegister = async (req, res, next) => {
@@ -180,9 +178,10 @@ export const login = async (req, res, next) => {
 
   // find user
   let user;
-  if (!email) user = await User.findOne({ username });
-  else {
+  if (email) {
     user = await User.findOne({ email });
+  } else {
+    user = await User.findOne({ username });
   }
 
   // check if user not exists

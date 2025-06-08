@@ -3,6 +3,10 @@ import { Roles, Skills } from "../../utils/enum/index.js";
 import { jobPostHiddenData } from "../../utils/hidden/index.js";
 import { entityMessages } from "../../utils/messages/entity.messages.js";
 import { evaluateResume } from "../../utils/resume/evaluate-resume.js";
+import {
+  formatRecommendationResponse,
+  scoreAndRankJobs,
+} from "./recommendation.algorithm.js";
 
 export const createJobPost = async (req, res, next) => {
   // parse request data
@@ -258,4 +262,26 @@ export const archiveJobPost = async (req, res, next) => {
     success: true,
     message: entityMessages.jobPost.updatedSuccessfully,
   });
+};
+
+export const getRecommendedJobPost = async (req, res, next) => {
+  const userSkills = req.user.skills.map((s) => s.skill);
+
+  const jobs = await JobPost.find({
+    // applicationDeadline: { $gte: new Date() },
+    archived: false,
+    requiredSkills: { $in: userSkills },
+  })
+    .populate([
+      { path: "company", select: "companyName profilePicture.secure_url -_id" },
+    ])
+    .lean();
+
+  if (!jobs.length) return next(new Error(entityMessages.jobPost.notFound));
+
+  const recommendedJobs = scoreAndRankJobs(jobs, userSkills);
+
+  const data = formatRecommendationResponse(recommendedJobs);
+
+  return res.status(200).json({ success: true, data });
 };

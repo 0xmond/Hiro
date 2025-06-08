@@ -75,7 +75,10 @@ export const search = async (req, res, next) => {
   const { q } = req.query;
 
   // get user
-  const users = await User.find({ username: { $regex: q, $options: "i" } })
+  const users = await User.find({
+    username: { $regex: q, $options: "i" },
+    isConfirmed: true,
+  })
     .select(
       "profileId username profilePicture.secure_url firstName lastName companyName role -_id"
     )

@@ -65,6 +65,13 @@ router.get(
 
 // get job post
 router.get(
+  "/recommended",
+  isAuthorized(endpoint.getRecommendedJobPost),
+  asyncHandler(jobPostService.getRecommendedJobPost)
+);
+
+// get job post
+router.get(
   "/:id?",
   isAuthorized(endpoint.getJobPost),
   isValid(getJobPost),

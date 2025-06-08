@@ -44,7 +44,7 @@ class RankingService {
     // pre-filter posts (only those with matching tags & recent)
     const posts = await Post.find({
       tags: { $in: interests },
-      publisherId: { $in: [...user.friendsIds] },
+      publisherId: { $in: [...user.friendsIds, user.profileId] },
       createdAt: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) }, // Last 30 days
       archived: false,
     })
@@ -58,11 +58,24 @@ class RankingService {
         },
         {
           path: "comments",
-          select: "_id",
+          populate: [
+            {
+              path: "user",
+              select:
+                "profilePicture.secure_url username firstName lastName companyName profileId -_id",
+            },
+          ],
         },
         {
           path: "reacts",
-          select: "_id",
+          select: "_id react userId",
+          populate: [
+            {
+              path: "user",
+              select:
+                "profilePicture.secure_url username firstName lastName companyName profileId -_id",
+            },
+          ],
         },
         {
           path: "sharedFrom",
@@ -74,8 +87,6 @@ class RankingService {
         },
       ])
       .lean();
-
-    console.log(posts);
 
     // rank the filtered posts
     const rankedPosts = posts
