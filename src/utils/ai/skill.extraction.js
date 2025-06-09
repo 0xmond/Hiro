@@ -43,7 +43,6 @@ export const extractSkillsFromText = async (text) => {
   "SEO",
   "Figma",
   "Prototyping",
-  "User Testing",
   "Jest",
   "Cypress",
   "Selenium",
@@ -111,13 +110,11 @@ export const extractSkillsFromText = async (text) => {
   "FastAPI",
   "Flask",
   "Docker",
-  "AWS SageMaker",
-  "Google AI Platform",
   "Azure ML",
   "MLOps",
   "Algorithm Design",
   "Statistics",
-];
+]
     
     Text: ${text}
     

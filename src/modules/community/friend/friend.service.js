@@ -114,6 +114,7 @@ export const approveOrDeclineFriendRequest = async (req, res, next) => {
   if (action) {
     await user.updateOne({
       $addToSet: { friendsIds: req.user.profileId },
+      $pull: { friendRequestsIds: req.user.profileId },
     });
     await Employee.updateOne(
       { profileId: req.user.profileId },
@@ -125,6 +126,11 @@ export const approveOrDeclineFriendRequest = async (req, res, next) => {
       { $pull: { friendRequestsIds: id } }
     );
   }
+
+  await Employee.updateOne(
+    { profileId: id },
+    { $pull: { friendRequestsSentIds: req.user.profileId } }
+  );
 
   // send success response
   return res.status(200).json({
@@ -204,10 +210,11 @@ export const getAllFriendRequests = async (req, res, next) => {
 };
 
 export const getSuggestions = async (req, res, next) => {
+  const currentUserSkills = req.user.skills.map((s) => s.skill);
   const users = await Employee.find(
     {
       skills: {
-        $in: req.user.skills,
+        $elemMatch: { skill: { $in: currentUserSkills } },
       },
       profileId: {
         $nin: req.user.friendsIds,

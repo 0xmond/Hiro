@@ -301,6 +301,9 @@ export const share = async (req, res, next) => {
 
   const originalPost = await Post.findOne({ archived: false, _id: postId });
 
+  if (!originalPost)
+    return next(new Error(entityMessages.post.notFound, { cause: 404 }));
+
   // add post data to db
   const post = await Post.create({
     content,
