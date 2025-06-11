@@ -29,7 +29,11 @@ router.get(
 );
 
 // search users
-router.get("/search", isValid(profileValidation.search), profileService.search);
+router.post(
+  "/search",
+  isValid(profileValidation.search),
+  profileService.search
+);
 
 // update profile
 router.put(

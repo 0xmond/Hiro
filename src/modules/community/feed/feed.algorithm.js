@@ -44,7 +44,9 @@ class RankingService {
     // pre-filter posts (only those with matching tags & recent)
     const posts = await Post.find({
       tags: { $in: interests },
-      publisherId: { $in: [...user.friendsIds, user.profileId] },
+      publisherId: {
+        $in: [...user.friendsIds, user.profileId, ...user.followingIds],
+      },
       createdAt: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) }, // Last 30 days
       archived: false,
     })
