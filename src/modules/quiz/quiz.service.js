@@ -5,6 +5,8 @@ import { Employee } from "../../db/models/user.model.js";
 
 // create a test for the choosen skill
 export const getSkillQuiz = async (req, res, next) => {
+  console.log(req.body);
+
   const skill = req.body.skill;
 
   const questions = await Question.aggregate([
@@ -12,7 +14,7 @@ export const getSkillQuiz = async (req, res, next) => {
     { $sample: { size: 5 } },
   ]);
 
-  if (!questions || questions.length < 5) {
+  if (!questions || questions?.length < 5) {
     return next(
       new Error("There is a problem right now, come back soon", { cause: 500 })
     );
